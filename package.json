@@ -11,6 +11,7 @@
   "dependencies": {
     "@astrojs/react": "^4.2.1",
     "@astrojs/tailwind": "^6.0.0",
+    "@fontsource/kotta-one": "^5.2.5",
     "@heroui/react": "^2.7.4",
     "@tailwindcss/vite": "^4.0.9",
     "@types/react": "^19.0.10",
