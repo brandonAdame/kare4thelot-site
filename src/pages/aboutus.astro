@@ -1,0 +1,30 @@
+---
+import AlternativeLayout from "../layouts/AlternativeLayout.astro";
+import studentImage from "../assets/images/students.jpg?url";
+import ImageBlurred from "../components/ImageBlurred";
+---
+
+<AlternativeLayout>
+  <div class="flex flex-col items-center justify-center pt-10">
+    <h1 class="text-4xl">
+      About <span class="text-earth-orange">U</span>s
+    </h1>
+    <p class="text-md mt-10 px-5">
+      Kare4TheLot was birthed during a time when the community / world was
+      uncertain if normal would every be an option. <br /><br /> We desire to be
+      a piece of the non-profit world that seeks to genuinely help those that has
+      consumed themselves with things to try to make sense of it all. <br /><br
+      /> Unfortunately, while trying to make sense of this life that we all face
+      now some have forgotten self care, worth, and value.
+    </p>
+    <div class="mt-10">
+      <ImageBlurred
+        client:load
+        src={studentImage}
+        alt="students"
+        width={350}
+        height={250}
+      />
+    </div>
+  </div>
+</AlternativeLayout>

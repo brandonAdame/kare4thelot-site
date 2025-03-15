@@ -26,7 +26,7 @@ const AnimatedHero = () => {
           <circle cx="55.2066" cy="3.2066" r="3.2066" fill="white" />
         </svg>
         <motion.h1
-          className="text-5xl font-bold"
+          className="text-5xl"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}

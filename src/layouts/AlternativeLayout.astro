@@ -1,0 +1,29 @@
+---
+import "@fontsource-variable/montserrat";
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="en" transition:animate="slide">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/logo-v2.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Kare4TheLot</title>
+  </head>
+  <body class="bg-ivory-100/90 min-h-screen">
+    <div class="flex flex-col min-h-screen">
+      <main class="flex-1">
+        <slot />
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>
+
+<style>
+  body {
+    font-family: "Montserrat Variable", sans-serif;
+  }
+</style>
