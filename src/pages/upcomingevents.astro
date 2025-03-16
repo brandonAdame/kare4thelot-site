@@ -1,43 +1,24 @@
 ---
 import "../styles/global.css";
-import EventCard from "../components/EventCard";
-import { DateRangePicker } from "@heroui/react";
-
 import { supabase } from "../db/supabase";
-import type { UpcomingEvent } from "../types/upcomingEvent";
-const { data: events, error } = await supabase
+import UpcomingEvents from "../components/UpcomingEvents";
+
+const {
+  data: events,
+  count,
+  error,
+} = await supabase
   .from("upcoming_events")
-  .select("*");
+  .select("*", { count: "exact" })
+  .range(0, 3);
 
 if (error) {
-  console.error("🚀 ~ error:", error);
+  console.error("error fetching events", error);
 }
 ---
 
-<body class="flex flex-col items-center bg-ivory-100/90 min-h-screen pt-10">
-  <h1 class="text-4xl pb-5">Upcoming Events</h1>
-  <div class="mb-5">
-    <DateRangePicker
-      client:load
-      className="max-w-xs"
-      label="Filter events"
-      aria-label="Filter events"
-    />
-  </div>
-  <div class="gap-4 grid grid-cols-2 lg:grid-cols-4 mb-16">
-    {
-      events?.map((event: UpcomingEvent) => (
-        <EventCard
-          client:visible
-          title={event.event_title}
-          isChip={event.chip_label ? true : false}
-          chipLabel={event.chip_label}
-          description={event.event_description}
-          img={event.image}
-        />
-      ))
-    }
-  </div>
+<body class="bg-ivory-100/90 min-h-screen pt-10">
+  <UpcomingEvents client:load initialEvents={events ?? []} count={count ?? 0} />
 </body>
 
 <style>
