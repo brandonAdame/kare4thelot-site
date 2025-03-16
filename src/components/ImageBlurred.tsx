@@ -1,5 +1,4 @@
 import { Image } from "@heroui/react";
-import studentImage from "../assets/images/students.jpg";
 
 export default function ImageBlurred({
   src,
