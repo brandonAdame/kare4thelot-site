@@ -1,5 +1,6 @@
 // tailwind.config.cjs
 const { heroui } = require("@heroui/react");
+import { mtConfig } from "@material-tailwind/react";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -8,7 +9,9 @@ module.exports = {
     "./src/**/*.{astro,astro:jsx,astro:jsx-dev-runtime,astro:tsx,astro:tsx-dev-runtime,html,js,jsx,ts,tsx,vue}",
   ],
   theme: {
-    fontFamily: {},
+    fontFamily: {
+      sans: ["Ysabeau Office Variable", "sans-serif"],
+    },
     extend: {
       colors: {
         "primary-site-color": "#F4F1BB",
@@ -55,8 +58,21 @@ module.exports = {
           950: "#1b2c31",
         },
         "site-gray": "#E6EBE0",
+        "green-white": {
+          50: "#f7f8f5",
+          100: "#e6ebe0",
+          200: "#d9e1d1",
+          300: "#bbc8ad",
+          400: "#95a781",
+          500: "#74885f",
+          600: "#5d6f4a",
+          700: "#4b583d",
+          800: "#3e4833",
+          900: "#333c2b",
+          950: "#191f14",
+        },
       },
     },
   },
-  plugins: [heroui()],
+  plugins: [heroui(), mtConfig],
 };

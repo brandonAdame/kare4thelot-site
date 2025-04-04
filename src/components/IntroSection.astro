@@ -1,0 +1,46 @@
+---
+import ImageCarousel from "./ImageCarousel";
+import "@fontsource-variable/quicksand";
+import "@fontsource-variable/oswald";
+import "@fontsource-variable/antonio";
+import "@fontsource/bebas-neue";
+---
+
+<div
+  class="flex flex-col justify-center items-center text-center pt-6 bg-ivory-50 pb-10"
+>
+  <div class="flex flex-col justify-center mb-10">
+    <h1 class="font-medium">Community. Prayer. Outreach.</h1>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 items-center">
+    <div class="flex flex-col items-center justify-center gap-6 mb-10 lg:mb-0">
+      <p class="px-7 text-left">
+        We believe in the power of faith, the strength of community, and the
+        call to serve. Together, we can make a difference.
+      </p>
+      <p class="text-left pt-7 tracking-wide px-7">
+        Faith moves us, community strengthens us, and service defines us.
+        Through prayer, outreach, and acts of kindness, we strive to bring hope
+        to those in need. Whether it’s lending a helping hand, supporting
+        families, or simply sharing a moment of encouragement, every action
+        makes a difference. Together, we are more than just individuals—we are a
+        united community, walking in faith and love.
+      </p>
+    </div>
+    <ImageCarousel client:visible />
+  </div>
+</div>
+
+<style>
+  h1 {
+    font-family: "Quicksand Variable", serif;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    line-height: clamp(2rem, 5vw, 2.75rem);
+  }
+
+  p {
+    font-family: "Tenor Sans", sans-serif;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    line-height: clamp(1rem, 5vw, 1.5rem);
+  }
+</style>

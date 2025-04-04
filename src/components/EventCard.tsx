@@ -31,13 +31,13 @@ const EventCard = (props: EventCardProps) => {
     useState<ModalProps["scrollBehavior"]>("inside");
 
   const formatTime = (time: string) => {
-    const [hours, minutes] = time.split(':');
+    const [hours, minutes] = time.split(":");
     const date = new Date();
     date.setHours(parseInt(hours), parseInt(minutes));
-    return new DateFormatter('en-US', {
-      hour: 'numeric',
-      minute: '2-digit',
-      hour12: true
+    return new DateFormatter("en-US", {
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true,
     }).format(date);
   };
 
@@ -55,7 +55,7 @@ const EventCard = (props: EventCardProps) => {
     <div className="h-full">
       <Card
         isPressable
-        className="w-full h-full flex flex-col"
+        className="flex h-full w-full flex-col"
         onPress={onOpen}
       >
         <CardHeader className="flex items-center justify-between">
@@ -68,21 +68,21 @@ const EventCard = (props: EventCardProps) => {
         </CardHeader>
         <CardBody className="flex-1">
           <Image
-            className="w-full object-cover h-[140px]"
+            className="h-[140px] w-full object-cover"
             src={props.image}
             width="100%"
             alt="Card image"
             aria-label="Card image"
           />
-          <p className="text-sm font-light pt-2">{props.event_description}</p>
+          <p className="pt-2 text-sm font-light">{props.event_description}</p>
         </CardBody>
-        <CardFooter className="flex flex-col gap-2 text-slate-400 text-sm font-light">
-          <div className="flex gap-1 justify-start w-full">
+        <CardFooter className="flex flex-col gap-2 text-sm font-light text-slate-400">
+          <div className="flex w-full justify-start gap-1">
             <Image src={calendarIcon} width={18} height={18} />
             <p>{eventDate}</p>
           </div>
-          <div className="flex gap-3 justify-between w-full lg:flex-col lg:gap-1 xl:flex-row xl:gap-3">
-            <div className="flex gap-1 items-center">
+          <div className="flex w-full justify-between gap-3 lg:flex-col lg:gap-1 xl:flex-row xl:gap-3">
+            <div className="flex items-center gap-1">
               <Image
                 src={clockIcon}
                 width={18}
@@ -92,7 +92,7 @@ const EventCard = (props: EventCardProps) => {
               />
               <p>{eventTime}</p>
             </div>
-            <div className="flex gap-1 items-center">
+            <div className="flex items-center gap-1">
               <Image
                 src={locationMarkerIcon}
                 width={18}
@@ -121,18 +121,18 @@ const EventCard = (props: EventCardProps) => {
               <ModalHeader>{props.event_title}</ModalHeader>
               <ModalBody>
                 <Image
-                  className="w-full object-cover h-[140px]"
+                  className="h-[140px] w-full object-cover"
                   src={props.image}
                   width="100%"
                   alt="Card image"
                   aria-label="Card image"
                 />
-                <div className="flex items-center gap-1 justify-start w-full">
+                <div className="flex w-full items-center justify-start gap-1">
                   <Image src={calendarIcon} width={18} height={18} />
                   <p>{eventDate}</p>
                 </div>
-                <div className="flex justify-between gap-3 w-full">
-                  <div className="flex gap-1 items-center">
+                <div className="flex w-full justify-between gap-3">
+                  <div className="flex items-center gap-1">
                     <Image
                       src={clockIcon}
                       width={18}
@@ -142,7 +142,7 @@ const EventCard = (props: EventCardProps) => {
                     />
                     <p>{eventTime}</p>
                   </div>
-                  <div className="flex gap-1 items-center">
+                  <div className="flex items-center gap-1">
                     <Image
                       src={locationMarkerIcon}
                       width={18}

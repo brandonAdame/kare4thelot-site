@@ -38,13 +38,13 @@ const UpcomingEvents = ({ initialEvents, count }: UpcomingEventsProps) => {
 
   useEffect(() => {
     fetchEvents();
-  }, [currentPage])
+  }, [currentPage]);
 
   const LoadingSkeleton = () => (
     <>
       {[...Array(4)].map((_, index) => (
-        <div key={index} className="w-full h-[400px]">
-          <Skeleton className="w-full h-full rounded-lg" />
+        <div key={index} className="h-[400px] w-full">
+          <Skeleton className="h-full w-full rounded-lg" />
         </div>
       ))}
     </>
@@ -60,7 +60,7 @@ const UpcomingEvents = ({ initialEvents, count }: UpcomingEventsProps) => {
         />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mb-16 w-[600px] lg:w-full max-w-7xl px-4">
+      <div className="mb-16 grid w-[600px] max-w-7xl grid-cols-1 gap-4 px-4 lg:w-full lg:grid-cols-4">
         {isLoading ? (
           <LoadingSkeleton />
         ) : (
@@ -78,7 +78,7 @@ const UpcomingEvents = ({ initialEvents, count }: UpcomingEventsProps) => {
 
   return (
     <div className="flex flex-col items-center">
-      <h1 className="text-4xl pb-5">Upcoming Events</h1>
+      <h1 className="pb-5 text-4xl">Upcoming Events</h1>
       {events.length ? renderEvents : <p>No upcoming events</p>}
       <Pagination
         initialPage={1}

@@ -1,0 +1,42 @@
+---
+import StudentsPhoto from "../assets/images/students.jpg";
+import { Image } from "astro:assets";
+---
+
+<div class="w-full h-[90vh]">
+  <div class="relative h-[90vh]">
+    <div class="h-full">
+      <Image
+        src={StudentsPhoto}
+        alt="Students Photo"
+        aria-label="Students Photo"
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <!-- Overlay text -->
+    <div
+      class="absolute bottom-0 left-0 -translate-y-7 -translate-x-5 flex flex-col justify-center text-ivory-50 ml-12 backdrop-blur-sm border-green-white-100 border-none rounded-xl"
+    >
+      <div class="pl-2 py-1">
+        <h1 class="font-bold text-white tracking-wide">
+          Serving with <span class="text-terracotta-500">Purpose</span>
+        </h1>
+        <p class="subtitle text-lg md:text-xl lg:text-2xl pt-2">
+          Because everyone deserves to feel valued and supported
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  h1 {
+    font-family: "Cinzel Decorative", serif;
+    font-size: clamp(2.25rem, 5vw, 6rem);
+    line-height: clamp(2.5rem, 5vw, 3.5rem);
+  }
+
+  .subtitle {
+    font-family: "Ysabeau Office Variable", sans-serif;
+  }
+</style>

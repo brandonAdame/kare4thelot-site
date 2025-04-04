@@ -1,0 +1,25 @@
+---
+import DonateButton from "./DonateButton";
+---
+
+<div
+  class="flex flex-col items-center justify-center bg-ivory-50 pt-12 px-10 tracking-wide gap-10 pb-10 text-center"
+>
+  <h1>Your Gift Makes a Difference</h1>
+  <p class="text-lg">
+    Your generosity helps us continue to serve the community.
+  </p>
+  <DonateButton client:visible />
+</div>
+
+<style>
+  h1 {
+    font-family: "Cinzel Decorative", serif;
+    font-size: clamp(2.25rem, 3vw, 3rem);
+    line-height: clamp(2.5rem, 5vw, 3.5rem);
+  }
+
+  p {
+    font-family: "Tenor Sans", sans-serif;
+  }
+</style>

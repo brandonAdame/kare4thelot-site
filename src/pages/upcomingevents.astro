@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import { supabase } from "../db/supabase";
 import UpcomingEvents from "../components/UpcomingEvents";
+import AlternativeLayout from "../layouts/AlternativeLayout.astro";
 
 const {
   data: events,
@@ -17,16 +18,15 @@ if (error) {
 }
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Upcoming Events - Kare4TheLot</title>
-  </head>
+<AlternativeLayout>
   <body class="bg-ivory-100/90 min-h-screen pt-10">
-    <UpcomingEvents client:load initialEvents={events ?? []} count={count ?? 0} />
+    <UpcomingEvents
+      client:load
+      initialEvents={events ?? []}
+      count={count ?? 0}
+    />
   </body>
-</html>
+</AlternativeLayout>
 
 <style>
   body {

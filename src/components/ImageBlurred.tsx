@@ -11,5 +11,14 @@ export default function ImageBlurred({
   width: number;
   height: number;
 }) {
-  return <Image isBlurred isZoomed src={src} alt={alt} width={width} height={height} />;
+  return (
+    <Image
+      isBlurred
+      isZoomed
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+    />
+  );
 }

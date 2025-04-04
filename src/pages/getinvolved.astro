@@ -1,0 +1,24 @@
+---
+import "@fontsource-variable/quicksand";
+import AlternativeLayout from "../layouts/AlternativeLayout.astro";
+import ContactForm from "../components/ContactForm";
+---
+
+<AlternativeLayout>
+  <div class="flex flex-col justify-center gap-6">
+    <h1 class="text-5xl text-center">Get Involved</h1>
+    <p class="text-lg text-center">
+      Would you like to help serve your community? Fill out the form below and
+      we'll get back to you!
+    </p>
+    <div class="w-full flex justify-center">
+      <ContactForm client:load />
+    </div>
+  </div>
+</AlternativeLayout>
+
+<style>
+  div {
+    font-family: "Quicksand Variable", sans-serif;
+  }
+</style>

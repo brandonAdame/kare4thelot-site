@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* @layer base {
+    @font-face {
+        font-family: "Ysabeau Office Variable";
+        src: url("@fontsource-variable/ysabeau-office") format("truetype");
+    }
+} */
