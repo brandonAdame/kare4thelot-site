@@ -1,26 +1,31 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import HealthFair from "../../../assets/images/Health-Fair.png?url";
+import Activity from "../../../assets/images/activity.jpg?url";
+import SnackTable from "../../../assets/images/snack-table.jpg?url";
+import RetirementHome from "../../../assets/images/retirement-home.jpg?url";
+import RetirementHome2 from "../../../assets/images/retirement-home-2.jpg?url";
 import "./styles.css";
 
 const cards = [
   {
-    src: "https://images.unsplash.com/photo-1727717768632-f4241a128f50?q=80&w=2889&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: HealthFair,
     angle: "8deg",
   },
   {
-    src: "https://images.unsplash.com/photo-1727400068319-565c56633dc3?q=80&w=1911&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: RetirementHome,
     angle: "-15deg",
   },
   {
-    src: "https://images.unsplash.com/photo-1726551195764-f98a8e8a57c3?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: RetirementHome2,
     angle: "-5deg",
   },
   {
-    src: "https://images.unsplash.com/photo-1727775805114-a87c6bcaf9db?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: SnackTable,
     angle: "10deg",
   },
   {
-    src: "https://images.unsplash.com/photo-1614680108604-c23b65f7e7dc?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: Activity,
     angle: "-5deg",
   },
 ];

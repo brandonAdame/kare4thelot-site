@@ -5,13 +5,13 @@ import ContactForm from "../components/ContactForm";
 ---
 
 <AlternativeLayout>
-  <div class="flex flex-col justify-center gap-6">
+  <div class="flex flex-col justify-center items-center gap-6 pt-10 lg:pt-0">
     <h1 class="text-5xl text-center">Contact Us</h1>
-    <p class="text-lg text-center">
+    <p class="text-sm md:text-lg text-center w-2/3">
       We'd love to hear from you! Fill out the form below and we'll get back to
       you as soon as possible.
     </p>
-    <div class="w-full flex justify-center">
+    <div class="w-full flex justify-center pb-10 lg:pb-0">
       <ContactForm client:load />
     </div>
   </div>

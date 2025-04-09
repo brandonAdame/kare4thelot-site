@@ -61,7 +61,7 @@ const EventCard = (props: EventCardProps) => {
         <CardHeader className="flex items-center justify-between">
           <h1>{props.event_title}</h1>
           {props.isChip && (
-            <Chip color="primary" size="sm" className="text-xs">
+            <Chip color="primary" size="sm" className="text-[11px]">
               {props.chip_label}
             </Chip>
           )}

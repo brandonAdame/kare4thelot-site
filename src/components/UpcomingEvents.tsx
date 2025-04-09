@@ -1,24 +1,50 @@
 import EventCard from "../components/EventCard";
-import { DateRangePicker, Pagination, Skeleton } from "@heroui/react";
+import {
+  DateRangePicker,
+  Pagination,
+  Skeleton,
+  type DateValue,
+  type RangeValue,
+} from "@heroui/react";
 import { useState, useEffect } from "react";
+import { getLocalTimeZone, today } from "@internationalized/date";
 import type { Tables } from "../../database.types";
+import "../styles/upcomingEvents.css";
 
 interface UpcomingEventsProps {
   initialEvents: Tables<"upcoming_events">[];
   count: number;
 }
 
+interface RequestParams {
+  page: number;
+  startDate: string | null;
+  endDate: string | null;
+}
+
 const UpcomingEvents = ({ initialEvents, count }: UpcomingEventsProps) => {
   const [events, setEvents] =
     useState<Tables<"upcoming_events">[]>(initialEvents);
-  const [currentPage, setCurrentPage] = useState(1);
   const [totalCount, setTotalCount] = useState(count);
   const [isLoading, setIsLoading] = useState(false);
+  const [eventReqParams, setEventReqParams] = useState<RequestParams>({
+    page: 1,
+    startDate: null,
+    endDate: null,
+  });
 
   const fetchEvents = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch(`/api/events?page=${currentPage}`);
+
+      // Filter out 'null' value parameters
+      const filteredParams = Object.fromEntries(
+        Object.entries(eventReqParams).filter(([_, value]) => value != null),
+      );
+
+      const queryString = new URLSearchParams(filteredParams).toString();
+
+      const response = await fetch(`/api/events?${queryString}`);
       const data = await response.json();
 
       if (response.ok) {
@@ -33,12 +59,28 @@ const UpcomingEvents = ({ initialEvents, count }: UpcomingEventsProps) => {
   };
 
   const handleOnPageChange = (page: number) => {
-    setCurrentPage(page);
+    setEventReqParams({
+      page: page,
+      startDate: eventReqParams.startDate,
+      endDate: eventReqParams.endDate,
+    });
+  };
+
+  const handleDateRangeChange = (e: RangeValue<DateValue> | null) => {
+    if (!e) return;
+    const startDate = e.start.toString();
+    const endDate = e.end.toString();
+
+    setEventReqParams({
+      page: eventReqParams.page,
+      startDate: startDate.toString(),
+      endDate: endDate.toString(),
+    });
   };
 
   useEffect(() => {
     fetchEvents();
-  }, [currentPage]);
+  }, [eventReqParams]);
 
   const LoadingSkeleton = () => (
     <>
@@ -52,15 +94,7 @@ const UpcomingEvents = ({ initialEvents, count }: UpcomingEventsProps) => {
 
   const renderEvents = (
     <>
-      <div className="mb-5">
-        <DateRangePicker
-          className="max-w-xs"
-          label="Filter events"
-          aria-label="Filter events"
-        />
-      </div>
-
-      <div className="mb-16 grid w-[600px] max-w-7xl grid-cols-1 gap-4 px-4 lg:w-full lg:grid-cols-4">
+      <div className="mb-16 grid w-[300px] max-w-7xl grid-cols-1 gap-4 px-4 lg:w-full lg:grid-cols-4">
         {isLoading ? (
           <LoadingSkeleton />
         ) : (
@@ -73,13 +107,6 @@ const UpcomingEvents = ({ initialEvents, count }: UpcomingEventsProps) => {
           ))
         )}
       </div>
-    </>
-  );
-
-  return (
-    <div className="flex flex-col items-center">
-      <h1 className="pb-5 text-4xl">Upcoming Events</h1>
-      {events.length ? renderEvents : <p>No upcoming events</p>}
       <Pagination
         initialPage={1}
         total={Math.ceil(totalCount / 4)}
@@ -87,6 +114,26 @@ const UpcomingEvents = ({ initialEvents, count }: UpcomingEventsProps) => {
         onChange={handleOnPageChange}
         className="mb-8"
       />
+    </>
+  );
+
+  return (
+    <div className="flex flex-col items-center pt-10">
+      <h1 className="pb-5 text-4xl">Upcoming Events</h1>
+      <div className="mb-5">
+        <DateRangePicker
+          className="max-w-xs"
+          label="Filter events"
+          aria-label="Filter events"
+          minValue={today(getLocalTimeZone())}
+          onChange={(e) => handleDateRangeChange(e)}
+        />
+      </div>
+      {events.length ? (
+        renderEvents
+      ) : (
+        <p>No upcoming events. Check back later! 🙏</p>
+      )}
     </div>
   );
 };
