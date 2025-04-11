@@ -1,8 +1,36 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import AnimatedHero from "../components/AnimatedHero";
+import "@fontsource-variable/montserrat";
+import "@fontsource/tenor-sans";
+import "@fontsource-variable/ysabeau-office";
+import "@fontsource/cinzel-decorative";
+import Hero from "../components/Hero.astro";
+import IntroSection from "../components/IntroSection.astro";
+import TheStory from "../components/TheStory.astro";
+import Gifting from "../components/Gifting.astro";
+import CommunityEvents from "../components/CommunityEvents";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<Layout>
-  <AnimatedHero client:load />
-</Layout>
+<MainLayout>
+  <Hero />
+  <IntroSection />
+  <TheStory />
+  <Gifting />
+  <CommunityEvents client:visible />
+</MainLayout>
+
+<style>
+  h1 {
+    font-family: "Cinzel Decorative", serif;
+    font-size: clamp(2.25rem, 5vw, 3rem);
+    line-height: clamp(2.5rem, 5vw, 3.5rem);
+  }
+
+  .navbar-container {
+    font-family: "Cinzel Decorative", serif;
+  }
+
+  .subtitle {
+    font-family: "Ysabeau Office Variable", sans-serif;
+  }
+</style>

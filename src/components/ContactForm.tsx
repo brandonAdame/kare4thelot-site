@@ -22,7 +22,7 @@ const ContactForm = () => {
 
   return (
     <Form className="w-full max-w-xs lg:max-w-2xl" onSubmit={onSubmit}>
-      <div className="flex flex-col lg:flex-row w-full justify-between gap-4">
+      <div className="flex w-full flex-col justify-between gap-4 lg:flex-row">
         <Input
           isRequired
           isClearable
@@ -45,7 +45,6 @@ const ContactForm = () => {
       </div>
       <Textarea
         isRequired
-        isClearable
         label="About you"
         labelPlacement="outside"
         placeholder="Tell us about yourself! 😇"
@@ -56,7 +55,7 @@ const ContactForm = () => {
       </Button>
       {submitted && (
         <div className="text-small text-default-500">
-          You submitted: <code>{JSON.stringify(submitted)}</code>
+          Thank you for reaching out! We'll get back to you as soon as possible.
         </div>
       )}
     </Form>
