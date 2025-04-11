@@ -143,7 +143,7 @@ const HeroUINavbar = () => {
           <Logo />
           <Link
             color="foreground"
-            href="/alternative"
+            href="/"
             className="font-bold text-inherit"
           >
             Kare4TheLot
