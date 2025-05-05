@@ -8,55 +8,69 @@ import {
   NavbarMenuItem,
   Link,
   Button,
-  Image,
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
 } from "@heroui/react";
 
 import { useState } from "react";
 
-const Logo = () => {
+interface SVGProps {
+  fill: string;
+  size: number;
+  height?: number;
+  width?: number;
+}
+
+const LotLogo = () => {
   return (
     <svg
-      width="27"
-      height="26"
-      viewBox="0 0 315 314"
+      width="35"
+      height="34"
+      viewBox="0 0 317 316"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g filter="url(#filter0_d_28_7)">
         <path
-          d="M119.5 219V195H25.5V305.5H103.5C103.541 265.746 107 243 107 232.5C107 222 103.521 221.237 103.5 219H119.5Z"
-          fill="black"
+          d="M119.5 220V196H25.5V306.5H103.5C103.541 266.746 107 244 107 233.5C107 223 103.521 222.237 103.5 220H119.5Z"
+          fill="white"
         />
+        <path d="M220 196H119.5V220L192.5 306.5H308.5L220 196Z" fill="black" />
         <path
-          d="M119.5 195H220L308.5 305.5H192.5L119.5 219M119.5 195V219M119.5 195H25.5V305.5H103.5C103.541 265.746 107 243 107 232.5C107 222 103.521 221.237 103.5 219H119.5"
+          d="M119.5 196H220L308.5 306.5H192.5L119.5 220M119.5 196V220M119.5 196H25.5V306.5H103.5C103.541 266.746 107 244 107 233.5C107 223 103.521 222.237 103.5 220H119.5"
           stroke="black"
+          strokeWidth="3"
         />
       </g>
       <g filter="url(#filter1_d_28_7)">
         <path
-          d="M120 87.5V111.5H26V1H104C104.041 40.7543 107.5 63.5 107.5 74C107.5 84.5 104.021 85.2626 104 87.5H120Z"
-          fill="black"
+          d="M120 88.5V112.5H26V2H104C104.041 41.7543 107.5 64.5 107.5 75C107.5 85.5 104.021 86.2626 104 88.5H120Z"
+          fill="white"
         />
+        <path d="M220.5 112.5H120V88.5L193 2H309L220.5 112.5Z" fill="black" />
         <path
-          d="M120 111.5H220.5L309 1H193L120 87.5M120 111.5V87.5M120 111.5H26V1H104C104.041 40.7543 107.5 63.5 107.5 74C107.5 84.5 104.021 85.2626 104 87.5H120"
+          d="M120 112.5H220.5L309 2H193L120 88.5M120 112.5V88.5M120 112.5H26V2H104C104.041 41.7543 107.5 64.5 107.5 75C107.5 85.5 104.021 86.2626 104 88.5H120"
           stroke="black"
+          strokeWidth="3"
         />
       </g>
       <path
-        d="M25.344 145.84V159.408H30.016V163.888H25.344V174H20.224V163.888H1.92V159.856L11.072 132.4H16.192L7.168 159.408H20.224V151.344L21.824 145.84H25.344ZM32.64 129.2H56.96V133.68H47.552V174H42.048V133.68H32.64V129.2ZM89.753 129.2V174H84.249V153.776H68.889V174H63.385V129.2H68.889V149.296H84.249V129.2H89.753ZM101.26 129.2H122.572L121.932 133.68H106.764V149.296H120.652V153.776H106.764V169.52H123.212V174H101.26V129.2ZM131.51 129.2H137.014V169.52H151.478V174H131.51V129.2ZM171.694 174.768C168.195 174.768 165.465 174.363 163.502 173.552C161.582 172.741 160.195 171.44 159.342 169.648C158.531 167.813 158.019 165.424 157.806 162.48C157.635 159.536 157.55 155.931 157.55 151.664C157.55 147.397 157.635 143.792 157.806 140.848C158.019 137.861 158.531 135.472 159.342 133.68C160.195 131.845 161.582 130.523 163.502 129.712C165.465 128.859 168.195 128.432 171.694 128.432C175.235 128.432 177.966 128.859 179.886 129.712C181.849 130.523 183.235 131.845 184.046 133.68C184.899 135.472 185.411 137.861 185.582 140.848C185.795 143.792 185.902 147.397 185.902 151.664C185.902 155.931 185.795 159.536 185.582 162.48C185.411 165.424 184.899 167.813 184.046 169.648C183.235 171.44 181.849 172.741 179.886 173.552C177.966 174.363 175.235 174.768 171.694 174.768ZM180.334 161.648V141.552C180.334 140.315 180.27 139.184 180.142 138.16C180.057 137.093 179.758 136.176 179.246 135.408C178.734 134.64 177.881 134.043 176.686 133.616C175.534 133.189 173.891 132.976 171.758 132.976C169.582 132.976 167.897 133.189 166.702 133.616C165.55 134.043 164.718 134.64 164.206 135.408C163.694 136.176 163.374 137.093 163.246 138.16C163.161 139.184 163.118 140.315 163.118 141.552V161.648C163.118 162.885 163.161 164.037 163.246 165.104C163.374 166.128 163.694 167.024 164.206 167.792C164.718 168.56 165.55 169.157 166.702 169.584C167.897 170.011 169.582 170.224 171.758 170.224C173.891 170.224 175.534 170.011 176.686 169.584C177.881 169.157 178.734 168.56 179.246 167.792C179.758 167.024 180.057 166.128 180.142 165.104C180.27 164.037 180.334 162.885 180.334 161.648ZM191.328 129.2H215.648V133.68H206.24V174H200.736V133.68H191.328V129.2Z"
+        d="M25.344 146.84V160.408H30.016V164.888H25.344V175H20.224V164.888H1.92V160.856L11.072 133.4H16.192L7.168 160.408H20.224V152.344L21.824 146.84H25.344ZM32.64 130.2H56.96V134.68H47.552V175H42.048V134.68H32.64V130.2ZM89.753 130.2V175H84.249V154.776H68.889V175H63.385V130.2H68.889V150.296H84.249V130.2H89.753ZM101.26 130.2H122.572L121.932 134.68H106.764V150.296H120.652V154.776H106.764V170.52H123.212V175H101.26V130.2ZM131.51 130.2H137.014V170.52H151.478V175H131.51V130.2ZM171.694 175.768C168.195 175.768 165.465 175.363 163.502 174.552C161.582 173.741 160.195 172.44 159.342 170.648C158.531 168.813 158.019 166.424 157.806 163.48C157.635 160.536 157.55 156.931 157.55 152.664C157.55 148.397 157.635 144.792 157.806 141.848C158.019 138.861 158.531 136.472 159.342 134.68C160.195 132.845 161.582 131.523 163.502 130.712C165.465 129.859 168.195 129.432 171.694 129.432C175.235 129.432 177.966 129.859 179.886 130.712C181.849 131.523 183.235 132.845 184.046 134.68C184.899 136.472 185.411 138.861 185.582 141.848C185.795 144.792 185.902 148.397 185.902 152.664C185.902 156.931 185.795 160.536 185.582 163.48C185.411 166.424 184.899 168.813 184.046 170.648C183.235 172.44 181.849 173.741 179.886 174.552C177.966 175.363 175.235 175.768 171.694 175.768ZM180.334 162.648V142.552C180.334 141.315 180.27 140.184 180.142 139.16C180.057 138.093 179.758 137.176 179.246 136.408C178.734 135.64 177.881 135.043 176.686 134.616C175.534 134.189 173.891 133.976 171.758 133.976C169.582 133.976 167.897 134.189 166.702 134.616C165.55 135.043 164.718 135.64 164.206 136.408C163.694 137.176 163.374 138.093 163.246 139.16C163.161 140.184 163.118 141.315 163.118 142.552V162.648C163.118 163.885 163.161 165.037 163.246 166.104C163.374 167.128 163.694 168.024 164.206 168.792C164.718 169.56 165.55 170.157 166.702 170.584C167.897 171.011 169.582 171.224 171.758 171.224C173.891 171.224 175.534 171.011 176.686 170.584C177.881 170.157 178.734 169.56 179.246 168.792C179.758 168.024 180.057 167.128 180.142 166.104C180.27 165.037 180.334 163.885 180.334 162.648ZM191.328 130.2H215.648V134.68H206.24V175H200.736V134.68H191.328V130.2Z"
         fill="black"
       />
       <defs>
         <filter
           id="filter0_d_28_7"
-          x="21"
+          x="20"
           y="194.5"
-          width="292.541"
-          height="119.5"
+          width="295.623"
+          height="121.5"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -84,14 +98,14 @@ const Logo = () => {
         </filter>
         <filter
           id="filter1_d_28_7"
-          x="21.5"
+          x="20.5"
           y="0.5"
-          width="292.541"
-          height="119.5"
+          width="295.623"
+          height="121.5"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -122,8 +136,52 @@ const Logo = () => {
   );
 };
 
+const ChevronDown = ({ fill, size, height, width, ...props }: SVGProps) => {
+  return (
+    <svg
+      fill="none"
+      height={size || height || 24}
+      viewBox="0 0 24 24"
+      width={size || width || 24}
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="m19.92 8.95-6.52 6.52c-.77.77-2.03.77-2.8 0L4.08 8.95"
+        stroke={fill}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeMiterlimit={10}
+        strokeWidth={1.5}
+      />
+    </svg>
+  );
+};
+
+const CrossIcon = ({ fill, size, height, width, ...props }: SVGProps) => {
+  return (
+    <svg
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      height={size || height || 24}
+      viewBox="0 0 24 24"
+      width={size || width || 24}
+      {...props}
+    >
+      <path
+        fill="#ed6a5a"
+        d="M200 76h-44V32a12 12 0 0 0-12-12h-32a12 12 0 0 0-12 12v44H56a12 12 0 0 0-12 12v32a12 12 0 0 0 12 12h44v92a12 12 0 0 0 12 12h32a12 12 0 0 0 12-12v-92h44a12 12 0 0 0 12-12V88a12 12 0 0 0-12-12m4 44a4 4 0 0 1-4 4h-48a4 4 0 0 0-4 4v96a4 4 0 0 1-4 4h-32a4 4 0 0 1-4-4v-96a4 4 0 0 0-4-4H56a4 4 0 0 1-4-4V88a4 4 0 0 1 4-4h48a4 4 0 0 0 4-4V32a4 4 0 0 1 4-4h32a4 4 0 0 1 4 4v48a4 4 0 0 0 4 4h48a4 4 0 0 1 4 4Z"
+      />
+    </svg>
+  );
+};
+
 const HeroUINavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const icons = {
+    chevron: <ChevronDown fill="currentColor" size={16} />,
+    cross: <CrossIcon fill="#ed6a5a" size={30} />,
+  };
 
   const menuItems = [
     { title: "Donate", href: "#" },
@@ -140,36 +198,92 @@ const HeroUINavbar = () => {
           className="sm:hidden"
         />
         <NavbarBrand>
-          <Logo />
-          <Link
-            color="foreground"
-            href="/"
-            className="font-bold text-inherit"
-          >
+          <LotLogo />
+          <Link color="foreground" href="/" className="font-bold text-inherit">
             Kare4TheLot
           </Link>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden gap-4 sm:flex" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="/getinvolved">
-            Get Involved
+          <Link color="foreground" href="/ourservices" className="text-lg">
+            Our Services
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
           <Link
             color="foreground"
             href="/upcomingevents"
-            className="text-terracotta-500"
+            className="text-lg text-terracotta-500"
           >
             Upcoming Events
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="/contactus">
+          <Link color="foreground" href="/contactus" className="text-lg">
             Contact Us
           </Link>
         </NavbarItem>
+        <Dropdown>
+          <NavbarItem>
+            <DropdownTrigger>
+              <Button
+                disableRipple
+                className="bg-transparent p-0 text-lg data-[hover=true]:bg-transparent"
+                endContent={icons.chevron}
+                radius="sm"
+                variant="light"
+              >
+                More
+              </Button>
+            </DropdownTrigger>
+          </NavbarItem>
+          <DropdownMenu aria-label="More Kare4TheLot pages">
+            <DropdownItem
+              as={Link}
+              href="/getinvolved"
+              key="Get Involved"
+              description="Help us make an impact in our community"
+              startContent={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    fill="#ed6a5a"
+                    d="M200 74h-42V32a14 14 0 0 0-14-14h-32a14 14 0 0 0-14 14v42H56a14 14 0 0 0-14 14v32a14 14 0 0 0 14 14h42v90a14 14 0 0 0 14 14h32a14 14 0 0 0 14-14v-90h42a14 14 0 0 0 14-14V88a14 14 0 0 0-14-14m2 46a2 2 0 0 1-2 2h-48a6 6 0 0 0-6 6v96a2 2 0 0 1-2 2h-32a2 2 0 0 1-2-2v-96a6 6 0 0 0-6-6H56a2 2 0 0 1-2-2V88a2 2 0 0 1 2-2h48a6 6 0 0 0 6-6V32a2 2 0 0 1 2-2h32a2 2 0 0 1 2 2v48a6 6 0 0 0 6 6h48a2 2 0 0 1 2 2Z"
+                  />
+                </svg>
+              }
+            >
+              Get Involved
+            </DropdownItem>
+            <DropdownItem
+              as={Link}
+              href="/aboutus"
+              key="About Us"
+              description="Learn how we got started"
+              startContent={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    fill="#ed6a5a"
+                    fill-rule="evenodd"
+                    d="M256 42.667C138.18 42.667 42.667 138.179 42.667 256c0 117.82 95.513 213.334 213.333 213.334c117.822 0 213.334-95.513 213.334-213.334S373.822 42.667 256 42.667m0 384c-94.105 0-170.666-76.561-170.666-170.667S161.894 85.334 256 85.334c94.107 0 170.667 76.56 170.667 170.666S350.107 426.667 256 426.667m26.714-256c0 15.468-11.262 26.667-26.497 26.667c-15.851 0-26.837-11.2-26.837-26.963c0-15.15 11.283-26.37 26.837-26.37c15.235 0 26.497 11.22 26.497 26.666m-48 64h42.666v128h-42.666z"
+                  />
+                </svg>
+              }
+            >
+              About Us
+            </DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>

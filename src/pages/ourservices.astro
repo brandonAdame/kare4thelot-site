@@ -1,0 +1,61 @@
+---
+import PagesLayout from "../layouts/PagesLayout.astro";
+import "@fontsource-variable/quicksand";
+import ServicesLayout from "../components/ServicesLayout";
+---
+
+<PagesLayout>
+  <div class="py-10">
+    <div class="flex flex-col items-center gap-10">
+      <h1 class="text-5xl">Our Services</h1>
+      <p class="text-lg lg:text-xl text-center">
+        We travel to different underserved communities offering encouragement,
+        resources, workshops including:
+      </p>
+      <div class="mx-auto">
+        <div
+          class="flex justify-center items-center lg:gap-12 flex-wrap lg:flex-nowrap max-w-5xl"
+        >
+          <ul
+            role="list"
+            class="list-disc gap-32 pl-5 columns-1 lg:columns-2 lg:space-y-3 marker:text-breaker-bay-500 text-lg w-full lg:w-auto lg:mx-auto"
+          >
+            <li>Bible studies</li>
+            <li>Understanding emotional wellness</li>
+            <li>Creating a supportive environment</li>
+            <li>Building resilience</li>
+            <li>Resources and tools</li>
+            <li>Health</li>
+            <li>Hygiene</li>
+            <li>Self-care</li>
+            <li>Entrepenuership</li>
+            <li>Career goals</li>
+            <li>Mental health</li>
+            <li>Academic pressure</li>
+            <li>Fitness</li>
+            <li>Nutrition</li>
+            <li>Life skills</li>
+            <li>Therapy</li>
+            <li>Anti-bullying</li>
+            <li>Love and support</li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-lg lg:text-xl text-center w-3/4">
+        These services are provided for after school programs, nursing homes,
+        and for those that have found themselves displaced.
+      </p>
+
+      <div class="bg-breaker-bay-100 flex justify-center w-full py-10">
+        <h1 class="text-4xl font-semibold">Community Focused</h1>
+      </div>
+      <ServicesLayout client:visible />
+    </div>
+  </div>
+</PagesLayout>
+
+<style>
+  div {
+    font-family: "Quicksand Variable", sans-serif;
+  }
+</style>
