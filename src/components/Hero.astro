@@ -1,14 +1,14 @@
 ---
-import StudentsPhoto from "../assets/images/students.jpg";
-import K4L from "../assets/images/k4L.png?url";
+import HeroImage from "../assets/images/hero-image.png";
 import { Image } from "astro:assets";
+import "../styles/global.css";
 ---
 
-<div class="w-full h-[90vh]">
-  <div class="relative h-[90vh]">
+<div class="w-full">
+  <div class="relative h-[30vh]">
     <div class="h-full">
       <Image
-        src={StudentsPhoto}
+        src={HeroImage}
         alt="Students Photo"
         aria-label="Students Photo"
         class="w-full h-full object-cover"
@@ -16,28 +16,22 @@ import { Image } from "astro:assets";
     </div>
     <!-- Overlay text -->
     <div
-      class="absolute bottom-0 left-0 -translate-y-7 -translate-x-5 flex flex-col justify-center text-ivory-50 ml-12 backdrop-blur-sm border-green-white-100 border-none rounded-xl"
+      class="absolute bottom-0 left-0 -translate-y-14 -translate-x-8 flex flex-col justify-center ml-12"
     >
       <div class="pl-2 py-1">
-        <h1 class="font-bold text-white tracking-wide text-7xl">
-          Serving with <span class="text-terracotta-500">Purpose</span>
+        <h1 class="text-3xl font-monteilga-regular">
+          Serving
         </h1>
-        <p class="subtitle text-lg md:text-xl lg:text-2xl pt-2">
-          Because everyone deserves to feel valued and supported
-        </p>
+      </div>
+    </div>
+    <div
+      class="absolute bottom-0 left-0 -translate-y-3 translate-x-3 flex flex-col justify-center ml-12"
+    >
+      <div class="pl-2 py-1">
+        <h1 class="text-3xl font-monteilga-regular">
+          with a <span class="text-terracotta-500">Purpose</span>
+        </h1>
       </div>
     </div>
   </div>
 </div>
-
-<style>
-  h1 {
-    font-family: "Cinzel Decorative", serif;
-    /* font-size: clamp(2.25rem, 5vw, 6rem);
-    line-height: clamp(2.5rem, 5vw, 3.5rem); */
-  }
-
-  .subtitle {
-    font-family: "Ysabeau Office Variable", sans-serif;
-  }
-</style>

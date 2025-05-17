@@ -3,29 +3,43 @@
 ---
 
 <div
-  class="flex flex-col items-center justify-center pt-12 px-10 tracking-wide gap-10 pb-10"
+  class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-0 px-10 pt-12 pb-10 mt-10"
 >
-  <h1 class="text-3xl font-bold">Our Story</h1>
-  <p class="max-w-3xl text-xl">
-    Kare4TheLot was birthed during a time when the community / world was
-    uncertain if normal would every be an option. We desire to be a
-    piece of the non-profit world that seeks to genuinely help those that has consumed
-    themselves with things to try to make sense of it all. Unfortunately,
-    while trying to make sense of this life that we all face now some have forgotten
-    self care, worth, and value.
-  </p>
-  <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-6">
-    <div class="flex flex-col items-center justify-center gap-2">
-      <h2 class="text-2xl font-bold">Mission</h2>
-      <p class="max-w-xl text-center text-lg">
+  <!-- Our Story -->
+  <div class="lg:ml-44">
+    <div class="flex flex-col items-center lg:items-start gap-10 lg:gap-20">
+      <div class="relative">
+        <div
+          class="absolute inset-x-0 top-0 -translate-y-12 -translate-x-10 lg:-translate-x-7 lg:-translate-y-14"
+        >
+          <h1 class="handwritten text-5xl lg:text-6xl">Our</h1>
+        </div>
+        <h1 class="text-5xl lg:text-8xl">Story</h1>
+      </div>
+      <p class="w-full lg:w-3/4 text-xl">
+        Kare4TheLot was born during a time when the world—and our community—was
+        uncertain if normalcy would ever return. Our desire is to be a part of the
+        nonprofit space that genuinely helps those who have turned to various
+        distractions in an effort to make sense of it all. Sadly, in trying to
+        navigate life as we now know it, many have lost sight of self-care,
+        self-worth, and personal value.
+      </p>
+    </div>
+  </div>
+
+  <!-- Mission and Vision -->
+  <div class="flex flex-col items-center gap-10">
+    <div class="flex flex-col items-center gap-4">
+      <h2 class="text-2xl lg:text-4xl">Mission</h2>
+      <p class="max-w-lg text-center text-lg">
         To show underserved communities that there are still those who care
         about their well-being and to assist in rediscovering one's value in
         family and purpose.
       </p>
     </div>
-    <div class="flex flex-col items-center justify-center gap-2">
-      <h2 class="text-2xl font-bold">Vision</h2>
-      <p class="max-w-xl text-center text-lg">
+    <div class="flex flex-col items-center gap-4">
+      <h2 class="text-2xl lg:text-4xl">Vision</h2>
+      <p class="max-w-lg text-center text-lg">
         Kare4TheLot is a genuine driving force that displays love, encourages
         self-care, and supports everyone by providing hands-on resources for
         life skills, as well as mental and physical wellness.
@@ -35,15 +49,15 @@
 </div>
 
 <style>
-  h1 {
-    font-family: "Cinzel Decorative", serif;
+  h1, h2 {
+    font-family: "monteilga-regular", serif;
   }
 
-  h2 {
-    font-family: "Cinzel Decorative", serif;
+  .handwritten {
+    font-family: "hopeless-romantic-society", serif;
   }
 
   p {
-    font-family: "Tenor Sans", sans-serif;
+    font-family: "klimaks-bold", sans-serif;
   }
 </style>

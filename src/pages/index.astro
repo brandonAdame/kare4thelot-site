@@ -1,8 +1,4 @@
 ---
-import "@fontsource-variable/montserrat";
-import "@fontsource/tenor-sans";
-import "@fontsource-variable/ysabeau-office";
-import "@fontsource/cinzel-decorative";
 import Hero from "../components/Hero.astro";
 import IntroSection from "../components/IntroSection.astro";
 import TheStory from "../components/TheStory.astro";
@@ -17,22 +13,9 @@ import Sponsors from "../components/Sponsors.astro";
   <IntroSection />
   <TheStory />
   <Gifting />
-  <CommunityEvents client:visible />
   <Sponsors />
+  <CommunityEvents client:visible />
 </MainLayout>
 
 <style>
-  h1 {
-    font-family: "Cinzel Decorative", serif;
-    font-size: clamp(2.25rem, 5vw, 3rem);
-    line-height: clamp(2.5rem, 5vw, 3.5rem);
-  }
-
-  .navbar-container {
-    font-family: "Cinzel Decorative", serif;
-  }
-
-  .subtitle {
-    font-family: "Ysabeau Office Variable", sans-serif;
-  }
 </style>

@@ -1,12 +1,14 @@
 ---
 import DonateButton from "./DonateButton";
+import "@fontsource/cinzel-decorative";
+
 ---
 
 <div
-  class="flex flex-col items-center justify-center bg-ivory-50 pt-12 px-10 tracking-wide gap-10 pb-10 text-center"
+  class="flex flex-col items-center justify-center bg-gifting-pink pt-12 px-10 tracking-wide gap-10 pb-10 text-center"
 >
-  <h1>Your Gift Makes a Difference</h1>
-  <p class="text-lg">
+  <h1 class="text-white">Your Gift Makes a Difference</h1>
+  <p class="text-lg lg:text-xl">
     Your generosity helps us continue to serve the community.
   </p>
   <DonateButton client:visible />
@@ -20,6 +22,6 @@ import DonateButton from "./DonateButton";
   }
 
   p {
-    font-family: "Tenor Sans", sans-serif;
+    font-family: "klimaks-bold", sans-serif;
   }
 </style>

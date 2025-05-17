@@ -9,13 +9,25 @@ module.exports = {
     "./src/**/*.{astro,astro:jsx,astro:jsx-dev-runtime,astro:tsx,astro:tsx-dev-runtime,html,js,jsx,ts,tsx,vue}",
   ],
   theme: {
+    container: {
+      margin: "0 auto",
+    },
     fontFamily: {
-      sans: ["Ysabeau Office Variable", "sans-serif"],
+      "hopeless-romantic-society": ["hopeless-romantic-society", "sans-serif"],
+      "klimaks-bold-italic": ["klimaks-bold-italic", "sans-serif"],
+      "klimaks-bold": ["klimaks-bold", "sans-serif"],
+      "monteilga-regular": ["monteilga-regular", "sans-serif"],
+      // "monteilga-italic": ["monteilga-italic", "sans-serif"],
     },
     extend: {
       colors: {
         "primary-site-color": "#F4F1BB",
         "off-white": "#FBFBEB",
+        "highlight-blue": "#179CA1",
+        "highlight-red": "#FF8A7A",
+        "half-baked": "#98C8CA",
+        "footer-green": "hsla(125, 25%, 90%, 1)",
+        "gifting-pink": "hsla(7, 100%, 74%, 0.48)",
         ivory: {
           50: "#fbfbeb",
           100: "#f6f6cb",
@@ -70,6 +82,28 @@ module.exports = {
           800: "#3e4833",
           900: "#333c2b",
           950: "#191f14",
+        },
+      },
+      animation: {
+        "scroll-left": "scroll-left linear infinite",
+        "scroll-right": "scroll-right linear infinite",
+      },
+      keyframes: {
+        "scroll-left": {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateX(-50%)",
+          },
+        },
+        "scroll-right": {
+          "0%": {
+            transform: "translateX(-50%)",
+          },
+          "100%": {
+            transform: "translateX(0)",
+          },
         },
       },
     },
