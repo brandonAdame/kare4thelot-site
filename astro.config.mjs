@@ -6,15 +6,11 @@ import tailwindcss from "@astrojs/tailwind";
 
 import node from "@astrojs/node";
 
+import netlify from "@astrojs/netlify";
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), tailwindcss()],
 
-  experimental: {
-    svg: true,
-  },
-
-  adapter: node({
-    mode: "standalone",
-  }),
+  adapter: netlify(),
 });
