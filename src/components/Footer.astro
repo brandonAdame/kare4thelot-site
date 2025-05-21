@@ -25,7 +25,13 @@ const currentYear = new Date().getFullYear();
             >
           </li>
           <li>
-            <a href="#" class="hover:underline font-thin">Donate</a>
+            <a
+              href={import.meta.env.PAYMENT_URL}
+              target="_blank"
+              class="hover:underline font-thin"
+            >
+              Donate
+            </a>
           </li>
         </ul>
       </div>

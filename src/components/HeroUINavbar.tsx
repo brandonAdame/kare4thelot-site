@@ -183,8 +183,10 @@ const HeroUINavbar = () => {
     cross: <CrossIcon fill="#ed6a5a" size={30} />,
   };
 
+  const paymentUrl = import.meta.env.PAYMENT_URL;
+
   const menuItems = [
-    { title: "Donate", href: "#" },
+    { title: "Donate", href: paymentUrl },
     { title: "Upcoming Events", href: "/upcomingevents" },
     { title: "Get Involved", href: "/getinvolved" },
     { title: "Contact Us", href: "/contactus" },
@@ -290,7 +292,8 @@ const HeroUINavbar = () => {
           <Button
             as={Link}
             color="success"
-            href="#"
+            href={paymentUrl}
+            target="_blank"
             variant="flat"
             className="font-semibold"
           >
