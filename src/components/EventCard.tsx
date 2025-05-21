@@ -140,14 +140,6 @@ const EventCard = (props: EventCardProps) => {
                 )}
               </ModalHeader>
               <ModalBody>
-                {/* <Image
-                  className="h-[140px] w-full object-cover"
-                  src={props.image}
-                  width="100%"
-                  alt="Card image"
-                  aria-label="Card image"
-                /> */}
-                {/* <Image src={props.image} width="100%" height="100%" /> */}
                 <div className="flex w-full items-center justify-start gap-1">
                   <Image src={calendarIcon} width={18} height={18} />
                   <p>{eventDate}</p>
