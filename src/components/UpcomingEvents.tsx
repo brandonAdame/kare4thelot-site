@@ -86,7 +86,7 @@ const UpcomingEvents = ({ initialEvents, count }: UpcomingEventsProps) => {
     <>
       {[...Array(4)].map((_, index) => (
         <div key={index} className="h-[400px] w-full">
-          <Skeleton className="h-full w-full rounded-lg" />
+          <Skeleton className="h-[300px] w-[300px] rounded-lg" />
         </div>
       ))}
     </>
@@ -102,7 +102,7 @@ const UpcomingEvents = ({ initialEvents, count }: UpcomingEventsProps) => {
             <EventCard
               key={event.id}
               {...event}
-              isChip={event.chip_label ? true : false}
+              isChip={!!event.chip_label}
             />
           ))
         )}
