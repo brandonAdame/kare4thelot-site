@@ -56,13 +56,9 @@ const EventCard = (props: EventCardProps) => {
     timeZone: "America/New_York",
   });
 
-  console.log("Raw date: ", props.event_date);
-
   // Parse the date string first to handle timezone conversion properly
   const parsedDate = parseDate(props.event_date);
   const eventDate = dateFormatter.format(parsedDate.toDate("America/New_York"));
-
-  console.log("Formatted event date: ", eventDate);
 
   return (
     <div className="h-full">
