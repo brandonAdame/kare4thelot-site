@@ -32,8 +32,6 @@ export const GET: APIRoute = async ({ request }) => {
     const { data: events, count, error } = await query;
 
     if (error) {
-      console.log("🚀 ~ constGET:APIRoute= ~ error:", error);
-
       throw error;
     }
 
