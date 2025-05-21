@@ -1,38 +1,91 @@
 ---
 import Instagram from "../assets/Instagram-Icon.svg";
+import "@fontsource-variable/league-spartan";
+
+const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-footer-green flex flex-col relative">
-  <div class="flex justify-center -translate-y-1/2">
-    <p class="text-4xl font-bold bg-footer-green p-4 rounded-full">K4L</p>
-  </div>
+<footer class="bg-footer-green py-12 px-6 mt-10 relative">
+  <!-- Logo at top center -->
   <div
-    class="flex flex-col lg:flex-row justify-evenly items-start px-10 py-5 gap-8"
+    class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-footer-green p-3 rounded-full"
   >
-    <div>
-      <p>Resources</p>
-      <hr class="my-2 border-off-white max-w-9" />
-      <div class="flex flex-col gap-2 text-sm">
-        <a href="#">Upcoming Events</a>
-        <a href="#">Donate</a>
+    <p class="text-4xl font-bold">K</p>
+  </div>
+  <div class="container mx-auto">
+    <!-- Footer content -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Resources -->
+      <div class="text-left">
+        <h3 class="text-xl font-medium mb-4">Resources</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="/upcomingevents" class="hover:underline font-thin"
+              >Upcoming Events</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:underline font-thin">Donate</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Center logo and social media links -->
+      <div class="flex flex-col items-center justify-center mt-20">
+        <div class="flex items-center mb-4">
+          <h1 class="text-5xl font-medium">Kare4TheLot</h1>
+        </div>
+
+        <div class="mt-6">
+          <h4 class="text-lg font-medium mb-3">Follow us</h4>
+          <div class="flex space-x-4 justify-center">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:underline font-thin"
+            >
+              <Instagram width="24" height="24" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-right">
+        <h3 class="text-xl font-medium mb-4">Connect with us</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="tel:555-555-5555" class="hover:underline font-thin"
+              >555-555-5555</a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:kare4thelot@gmail.com"
+              class="hover:underline font-thin">kare4thelot@gmail.com</a
+            >
+          </li>
+        </ul>
       </div>
     </div>
-    <div>
-      <p>Connect with us</p>
-      <hr class="my-2 border-off-white max-w-9" />
-      <div class="flex flex-col gap-2 text-sm">
-        <a href="tel:555-555-5555">555-555-5555</a>
-        <a href="mailto:kare4thelot@gmail.com">kare4thelot@gmail.com</a>
+
+    <div
+      class="flex flex-col md:flex-row justify-between items-center mt-8 text-sm"
+    >
+      <div class="mb-3 md:mb-0 flex items-center">
+        <span class="mr-2">&lt; / &gt;</span>
+        <span>by Brandon Adame Gachuz</span>
+      </div>
+      <div>
+        &copy; {currentYear} Kare4TheLot. All rights reserved
       </div>
     </div>
   </div>
-  <div class="flex justify-center items-center px-10 py-5 gap-1">
-    <p>Follow us:</p>
-    <Instagram />
-  </div>
-  <div>
-    <p class="text-xs text-center">
-      &copy; 2025 Kare4TheLot. All rights reserved
-    </p>
-  </div>
+
+  <style>
+    footer,
+    h1 {
+      font-family: "League Spartan Variable", sans-serif;
+    }
+  </style>
 </footer>

@@ -10,7 +10,11 @@ module.exports = {
   ],
   theme: {
     container: {
-      margin: "0 auto",
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
     },
     fontFamily: {
       "hopeless-romantic-society": ["hopeless-romantic-society", "sans-serif"],
