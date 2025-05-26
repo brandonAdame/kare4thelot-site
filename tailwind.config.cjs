@@ -27,11 +27,13 @@ module.exports = {
       colors: {
         "primary-site-color": "#F4F1BB",
         "off-white": "#FBFBEB",
-        "highlight-blue": "#179CA1",
+        "highlight-blue": "hsla(182, 75%, 36%, 1)",
         "highlight-red": "#FF8A7A",
         "half-baked": "#98C8CA",
         "footer-green": "hsla(125, 25%, 90%, 1)",
         "gifting-pink": "hsla(7, 100%, 74%, 0.48)",
+        "gifting-pink-dark": "hsla(7, 100%, 74%, 1)",
+        "bible-verse-signature": "hsla(26, 90%, 66%, 1)",
         ivory: {
           50: "#fbfbeb",
           100: "#f6f6cb",
