@@ -21,7 +21,6 @@ module.exports = {
       "klimaks-bold-italic": ["klimaks-bold-italic", "sans-serif"],
       "klimaks-bold": ["klimaks-bold", "sans-serif"],
       "monteilga-regular": ["monteilga-regular", "sans-serif"],
-      // "monteilga-italic": ["monteilga-italic", "sans-serif"],
     },
     extend: {
       colors: {
