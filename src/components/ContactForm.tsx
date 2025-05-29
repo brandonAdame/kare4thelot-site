@@ -21,7 +21,11 @@ const ContactForm = () => {
   };
 
   return (
-    <Form className="w-full max-w-xs lg:max-w-2xl" onSubmit={onSubmit}>
+    <Form
+      className="w-full max-w-xs lg:max-w-2xl"
+      onSubmit={onSubmit}
+      data-netlify="true"
+    >
       <div className="flex w-full flex-col justify-between gap-4 lg:flex-row">
         <Input
           isRequired
