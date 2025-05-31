@@ -2,26 +2,38 @@ import { Form, Input, Textarea, Button } from "@heroui/react";
 import { useState } from "react";
 import type { FormEvent } from "react";
 
-interface FormData {
-  email: string;
-}
-
 const ContactForm = () => {
-  const [submitted, setSubmitted] = useState<FormData | null>(null);
+  const [submitted, setSubmitted] = useState<boolean>(false);
+  const [aboutYouText, setAboutYouText] = useState<string>("");
+
+  const encode = (data: any) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]),
+      )
+      .join("&");
+  };
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const formData = new FormData(e.currentTarget);
-    const data: FormData = {
-      email: formData.get("email") as string,
+    let data = {
+      ...Object.fromEntries(new FormData(e.currentTarget)),
+      aboutYou: aboutYouText,
     };
 
-    setSubmitted(data);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact-form", ...data }),
+    });
+
+    setSubmitted(true);
   };
 
   return (
     <Form
+      aria-label="Contact Form"
       className="w-full max-w-xs lg:max-w-2xl"
       onSubmit={onSubmit}
       data-netlify="true"
@@ -52,6 +64,7 @@ const ContactForm = () => {
         label="About you"
         labelPlacement="outside"
         placeholder="Tell us about yourself! 😇"
+        onChange={(e) => setAboutYouText(e.target.value)}
       />
 
       <Button type="submit" variant="shadow" className="bg-terracotta-300">
