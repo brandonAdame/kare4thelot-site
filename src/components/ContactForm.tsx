@@ -34,13 +34,18 @@ const ContactForm = () => {
       aboutYou: aboutYouText,
     };
 
-    const { status } = await axios.post(
-      import.meta.env.FORM_CARRY_URL,
-      encode(formData),
-    );
+    try {
+      const { status } = await axios.post(
+        import.meta.env.FORM_CARRY_URL,
+        encode(formData),
+      );
 
-    if (status === 200) {
-      onOpen();
+      if (status === 200) {
+        onOpen();
+      }
+    } catch (error) {
+      console.error('Form submission failed:', error);
+      // Consider showing error modal or toast notification
     }
   };
 

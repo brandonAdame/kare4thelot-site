@@ -3,13 +3,7 @@ import "@/styles/text-flip.css";
 
 export default function TextFlip() {
   const words = useMemo(
-    () => [
-      "helps serve the underserved",
-      "helps make a difference",
-      "helps our community",
-      "helps spread God’s love",
-      "helps serve the underserved",
-    ],
+    () => ["difference", "way", "change", "disciple", "difference"],
     [],
   );
 
@@ -38,7 +32,7 @@ export default function TextFlip() {
 
   return (
     <div className="box-content flex flex-col gap-4 text-3xl font-semibold">
-      <p className="title-text text-foreground">Your gift</p>
+      <p className="title-text text-foreground">Your gift helps make a</p>
       <div
         ref={tallestRef}
         className="word-flip flex flex-col overflow-hidden text-white"

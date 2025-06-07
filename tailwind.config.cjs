@@ -1,6 +1,6 @@
 // tailwind.config.cjs
 const { heroui } = require("@heroui/react");
-import { mtConfig } from "@material-tailwind/react";
+const { mtConfig } = require("@material-tailwind/react");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -127,5 +127,5 @@ module.exports = {
       },
     },
   },
-  plugins: [heroui(), mtConfig],
+  plugins: [heroui(), mtConfig()],
 };

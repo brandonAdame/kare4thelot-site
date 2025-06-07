@@ -2,6 +2,12 @@
 import PagesLayout from "../layouts/PagesLayout.astro";
 import ServicesLayout from "../components/ServicesLayout";
 import "../styles/global.css";
+
+export const metadata = {
+  title: "Our Services - Kare4TheLot",
+  description:
+    "We travel to different underserved communities offering encouragement, resources, workshops including Bible studies, emotional wellness, and life skills.",
+};
 ---
 
 <PagesLayout>
@@ -28,7 +34,7 @@ import "../styles/global.css";
             <li>Health</li>
             <li>Hygiene</li>
             <li>Self-care</li>
-            <li>Entrepenuership</li>
+            <li>Entrepreneurship</li>
             <li>Career goals</li>
             <li>Mental health</li>
             <li>Academic pressure</li>
@@ -47,7 +53,9 @@ import "../styles/global.css";
       </p>
 
       <div class="bg-breaker-bay-100 flex justify-center w-full py-10">
-        <h1 class="text-4xl font-semibold text-center">Community Focused</h1>
+        <h1 class="text-3xl md:text-4xl font-semibold text-center">
+          Community Focused
+        </h1>
       </div>
       <ServicesLayout client:visible />
     </div>
@@ -58,7 +66,8 @@ import "../styles/global.css";
   h1 {
     font-family: "monteilga-regular", sans-serif;
   }
-  li, p {
+  li,
+  p {
     font-family: "klimaks-bold", sans-serif;
   }
 </style>

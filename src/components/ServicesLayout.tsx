@@ -9,7 +9,7 @@ const ServicesLayout = () => {
   return (
     <div className="grid max-w-[900px] grid-cols-12 grid-rows-2 gap-2 px-8 md:px-0">
       <Card className="col-span-12 h-[300px] sm:col-span-4">
-        <CardHeader className="items-start! absolute bottom-0 z-10 flex-col backdrop-blur-md">
+        <CardHeader className="absolute bottom-0 z-10 flex-col backdrop-blur-md">
           <h4 className="text-large font-medium text-white">
             Booth at the Community Health Fair
           </h4>
@@ -17,7 +17,7 @@ const ServicesLayout = () => {
         <Image
           isZoomed
           removeWrapper
-          alt="Card background"
+          alt="Booth at the Community Health Fair"
           className="z-0 h-full w-full object-cover"
           src={HealthFair2}
         />
@@ -29,7 +29,7 @@ const ServicesLayout = () => {
         <Image
           isZoomed
           removeWrapper
-          alt="Card background"
+          alt="Retirement Home Smiles"
           className="z-0 h-full w-full object-cover"
           src={RetirementHome}
         />
@@ -41,7 +41,7 @@ const ServicesLayout = () => {
         <Image
           isZoomed
           removeWrapper
-          alt="Card background"
+          alt="Retirement Home Smiles"
           className="z-0 h-full w-full object-cover"
           src={RetirementHome2}
         />
@@ -55,7 +55,7 @@ const ServicesLayout = () => {
         <Image
           isZoomed
           removeWrapper
-          alt="Card background"
+          alt="Student Activities"
           className="z-0 h-full w-full object-cover"
           src={Students}
         />
@@ -67,7 +67,7 @@ const ServicesLayout = () => {
         <Image
           isZoomed
           removeWrapper
-          alt="Card background"
+          alt="School Activity"
           className="z-0 h-full w-full object-cover"
           src={Activity}
         />

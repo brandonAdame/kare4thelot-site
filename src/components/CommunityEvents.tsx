@@ -17,7 +17,7 @@ const CommunityEvents = () => {
             when you did it to one of the least of these <br />
           </span>
           <span className="font-klimaks-bold">
-            my brothers and <br /> sisters, <br /> you were doing it do me!'" -
+            my brothers and <br /> sisters, <br /> you were doing it to me!'" -
           </span>
         </p>
         <p className="text-bible-verse-signature font-hopeless-romantic-society text-2xl">
