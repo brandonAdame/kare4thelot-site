@@ -1,18 +1,27 @@
 ---
 import ImageCarousel from "./ImageCarousel";
 import "../styles/global.css";
+import { TextGenerateEffect } from "./ui/text-generate-effect";
 ---
 
 <div
   class="flex flex-col justify-center items-center text-center pt-6 bg-ivory-50 pb-10"
 >
   <div class="flex flex-col justify-center mb-10">
-    <h1 class="lg:text-5xl">Community. Prayer. Outreach.</h1>
+    <!-- <h1 class="lg:text-5xl">Community. Prayer. Outreach.</h1> -->
+    <TextGenerateEffect
+      client:visible
+      duration={2.5}
+      words="Community. Prayer. Outreach."
+      className="font-monteilga-regular lg:text-5xl"
+    />
   </div>
   <div class="grid grid-cols-1 items-center">
     <div class="flex flex-col items-center justify-center gap-6 mb-10 lg:mb-0">
       <div class="flex relative mt-4">
-        <div class="absolute inset-y-0 left-0 translate-x-12 lg:relative lg:translate-x-16 lg:-translate-y-2 lg:flex lg:items-center lg:gap-2">
+        <div
+          class="absolute inset-y-0 left-0 translate-x-12 lg:relative lg:translate-x-16 lg:-translate-y-2 lg:flex lg:items-center lg:gap-2"
+        >
           <h1
             class="absolute inset-y-0 left-0 -translate-y-5 -translate-x-8 lg:relative lg:translate-y-0 lg:translate-x-0 handwritten text-lg lg:text-2xl font-hopeless-romantic-society"
           >
@@ -40,8 +49,8 @@ import "../styles/global.css";
           </p>
           <p class="text-left px-7 text-xl lg:w-3/4 lg:order-2">
             Faith moves us, <span class="text-highlight-red"
-              >community strengthens us, and service defines us</span
-            >, and service defines us.
+              >community strengthens us, and service defines us.</span
+            >
             <span class="text-highlight-blue"
               >Through prayer, outreach, and acts of kindness, we strive to
               bring hope to those in need. Whether it’s lending a helping hand,

@@ -8,8 +8,25 @@ import { NavArrowRight, NavArrowLeft } from "iconoir-react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import GreenvillePD from "../assets/images/Greenville-PD.png?url";
 import HealthFair2 from "../assets/images/Health-Fair2.png?url";
-import StudentActivity from "../assets/images/student-activity.jpg?url";
-import StudentActivity2 from "../assets/images/student-activity-2.jpg?url";
+import StudentActivity from "../assets/images/student-activity-2.jpg?url";
+import ServingRetirement from "@/assets/images/serving-retirement.png?url";
+import ColgateTruckActivity from "@/assets/images/edited-photos/colgate-truck-activity.jpg?url";
+import OutdoorActivity from "@/assets/images/edited-photos/outdoor-activity.jpg?url";
+import RetirementHomeSmiles from "@/assets/images/edited-photos/retirement-home-smiles.jpg?url";
+import RetirementHomeHugs from "@/assets/images/edited-photos/retirement-home-hugs.jpg?url";
+import RetirementHome2 from "@/assets/images/edited-photos/retirement-home-2.jpg?url";
+
+const images = [
+  ServingRetirement,
+  RetirementHomeSmiles,
+  RetirementHomeHugs,
+  RetirementHome2,
+  ColgateTruckActivity,
+  OutdoorActivity,
+  GreenvillePD,
+  HealthFair2,
+  StudentActivity,
+];
 
 function CustomNavigation() {
   const swiper = useSwiper();
@@ -57,17 +74,15 @@ export default function ImageCarousel() {
         modules={[Navigation, Pagination]}
         className="relative rounded-lg [&_div.swiper-button-next]:text-background [&_div.swiper-button-prev]:text-background"
       >
-        {[GreenvillePD, HealthFair2, StudentActivity, StudentActivity2].map(
-          (img, index) => (
-            <SwiperSlide key={index} className="select-none">
-              <img
-                src={img}
-                alt={`image-${index}`}
-                className="h-[28rem] w-full object-cover"
-              />
-            </SwiperSlide>
-          ),
-        )}
+        {images.map((img, index) => (
+          <SwiperSlide key={index} className="select-none">
+            <img
+              src={img}
+              alt={`image-${index}`}
+              className="h-[28rem] w-full object-cover"
+            />
+          </SwiperSlide>
+        ))}
         <CustomNavigation />
       </Swiper>
     </div>

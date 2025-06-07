@@ -1,13 +1,13 @@
 ---
-import DonateButton from "./DonateButton";
 import "@fontsource/cinzel-decorative";
-
+import DonateButton from "./DonateButton";
+import TextFlip from "./animata/text/text-flip";
 ---
 
 <div
   class="flex flex-col items-center justify-center bg-gifting-pink pt-12 px-10 tracking-wide gap-10 pb-10 text-center"
 >
-  <h1 class="text-white">Your Gift Makes a Difference</h1>
+  <TextFlip client:visible />
   <p class="text-lg lg:text-xl">
     Your generosity helps us continue to serve the community.
   </p>

@@ -23,6 +23,9 @@ module.exports = {
       "monteilga-regular": ["monteilga-regular", "sans-serif"],
     },
     extend: {
+      backgroundImage: {
+        "our-story": "url('/src/assets/images/edited-photos/our-story-background.png')",
+      },
       colors: {
         "primary-site-color": "#F4F1BB",
         "off-white": "#FBFBEB",
@@ -92,6 +95,7 @@ module.exports = {
       animation: {
         "scroll-left": "scroll-left linear infinite",
         "scroll-right": "scroll-right linear infinite",
+        "flip-words": "flip-words 8s infinite",
       },
       keyframes: {
         "scroll-left": {
@@ -109,6 +113,16 @@ module.exports = {
           "100%": {
             transform: "translateX(0)",
           },
+        },
+        "flip-words": {
+          "10%": { transform: "translateY(-112%)" },
+          "25%": { transform: "translateY(-100%)" },
+          "35%": { transform: "translateY(-212%)" },
+          "50%": { transform: "translateY(-200%)" },
+          "60%": { transform: "translateY(-312%)" },
+          "75%": { transform: "translateY(-300%)" },
+          "85%": { transform: "translateY(-412%)" },
+          "100%": { transform: "translateY(-400%)" },
         },
       },
     },

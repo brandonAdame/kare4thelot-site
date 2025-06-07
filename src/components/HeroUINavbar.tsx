@@ -186,7 +186,7 @@ const HeroUINavbar = () => {
   const paymentUrl = import.meta.env.PAYMENT_URL;
 
   const menuItems = [
-    { title: "Donate", href: paymentUrl },
+    { title: "Our Services", href: "/ourservices" },
     { title: "Upcoming Events", href: "/upcomingevents" },
     { title: "Get Involved", href: "/getinvolved" },
     { title: "Contact Us", href: "/contactus" },
@@ -285,13 +285,7 @@ const HeroUINavbar = () => {
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
               className="w-full"
-              color={
-                index === 2
-                  ? "primary"
-                  : index === menuItems.length - 1
-                    ? "danger"
-                    : "foreground"
-              }
+              color={"foreground"}
               href={item.href}
               size="lg"
             >
