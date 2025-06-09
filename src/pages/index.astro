@@ -1,8 +1,18 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import AnimatedHero from "../components/AnimatedHero";
+import Hero from "../components/Hero.astro";
+import IntroSection from "../components/IntroSection.astro";
+import TheStory from "../components/TheStory.astro";
+import Gifting from "../components/Gifting.astro";
+import CommunityEvents from "../components/CommunityEvents";
+import MainLayout from "../layouts/MainLayout.astro";
+import Sponsors from "../components/Sponsors.astro";
 ---
 
-<Layout>
-  <AnimatedHero client:load />
-</Layout>
+<MainLayout>
+  <Hero />
+  <IntroSection />
+  <TheStory />
+  <Gifting />
+  <Sponsors />
+  <CommunityEvents client:visible />
+</MainLayout>

@@ -1,0 +1,23 @@
+---
+import "@fontsource-variable/montserrat";
+import Footer from "../components/Footer.astro";
+import HeroUINavbar from "../components/HeroUINavbar";
+---
+
+<!doctype html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/logo-v2.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Kare4TheLot</title>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <HeroUINavbar client:load />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
