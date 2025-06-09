@@ -6,7 +6,7 @@ const firstNames = [
   "Nazmokeem",
   "Nia",
   "Niran",
-  "Jeakare",
+  "Jekare",
   "Jaiven",
   "Reimage Church, Winterville NC",
 ];

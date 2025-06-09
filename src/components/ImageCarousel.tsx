@@ -9,15 +9,15 @@ import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import GreenvillePD from "../assets/images/Greenville-PD.png?url";
 import HealthFair2 from "../assets/images/Health-Fair2.png?url";
 import StudentActivity from "../assets/images/student-activity-2.jpg?url";
-import ServingRetirement from "@/assets/images/serving-retirement.png?url";
 import ColgateTruckActivity from "@/assets/images/edited-photos/colgate-truck-activity.jpg?url";
 import OutdoorActivity from "@/assets/images/edited-photos/outdoor-activity.jpg?url";
+import SmilingRetirementHome from "@/assets/images/edited-photos/smiling-retirement-home.jpg?url";
 import RetirementHomeSmiles from "@/assets/images/edited-photos/retirement-home-smiles.jpg?url";
 import RetirementHomeHugs from "@/assets/images/edited-photos/retirement-home-hugs.jpg?url";
 import RetirementHome2 from "@/assets/images/edited-photos/retirement-home-2.jpg?url";
 
 const images = [
-  ServingRetirement,
+  SmilingRetirementHome,
   RetirementHomeSmiles,
   RetirementHomeHugs,
   RetirementHome2,
