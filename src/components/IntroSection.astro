@@ -2,10 +2,11 @@
 import ImageCarousel from "./ImageCarousel";
 import "../styles/global.css";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
+import AlertBanner from "./alerts/alertbanner";
 ---
 
 <div
-  class="flex flex-col justify-center items-center text-center pt-6 bg-ivory-50 pb-10"
+  class="flex flex-col justify-center items-center text-center pt-6 bg-ivory-50 lg:pb-10"
 >
   <div class="flex flex-col justify-center mb-10">
     <TextGenerateEffect
@@ -16,7 +17,7 @@ import { TextGenerateEffect } from "./ui/text-generate-effect";
     />
   </div>
   <div class="grid grid-cols-1 items-center">
-    <div class="flex flex-col items-center justify-center gap-6 mb-10 lg:mb-0">
+    <div class="flex flex-col items-center justify-center gap-9 lg:mb-0">
       <div class="flex relative mt-4">
         <div
           class="absolute inset-y-0 left-0 translate-x-12 lg:relative lg:translate-x-16 lg:-translate-y-2 lg:flex lg:items-center lg:gap-2"
@@ -60,6 +61,7 @@ import { TextGenerateEffect } from "./ui/text-generate-effect";
           </p>
         </div>
       </div>
+      <AlertBanner client:load />
     </div>
   </div>
 </div>

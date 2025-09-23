@@ -189,6 +189,7 @@ const HeroUINavbar = () => {
     { title: "Our Services", href: "/ourservices" },
     { title: "Upcoming Events", href: "/upcomingevents" },
     { title: "Get Involved", href: "/getinvolved" },
+    { title: "KareFreeBoutique", href: "/clothing" },
     { title: "Contact Us", href: "/contactus" },
   ];
 

@@ -53,8 +53,8 @@ License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
         url('/fonts/klimaks/klimaks-bold-italic.woff') format('woff'),
         url('/fonts/klimaks/klimaks-bold-italic.ttf') format('truetype'),
         url('/fonts/klimaks/klimaks-bold-italic.svg#youworkforthem') format('svg');
-    font-weight: normal;
-    font-style: normal;
+    font-weight: bold;
+    font-style: italic;
     font-display: swap;
 }
 
@@ -82,7 +82,7 @@ License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
         url('/fonts/klimaks/klimaks-bold.woff') format('woff'),
         url('/fonts/klimaks/klimaks-bold.ttf') format('truetype'),
         url('/fonts/klimaks/klimaks-bold.svg#youworkforthem') format('svg');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
@@ -121,7 +121,7 @@ License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
         url('/fonts/monteilga/monteilga-italic.ttf') format('truetype'),
         url('/fonts/monteilga/monteilga-italic.svg#youworkforthem') format('svg');
     font-weight: normal;
-    font-style: normal;
+    font-style: italic;
     font-display: swap;
 }
 
@@ -149,8 +149,8 @@ License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
             url('/fonts/klimaks/klimaks-bold-italic.woff') format('woff'),
             url('/fonts/klimaks/klimaks-bold-italic.ttf') format('truetype'),
             url('/fonts/klimaks/klimaks-bold-italic.svg#youworkforthem') format('svg');
-        font-weight: normal;
-        font-style: normal;
+        font-weight: bold;
+        font-style: italic;
         font-display: swap;
     }
 
@@ -162,7 +162,7 @@ License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
             url('/fonts/klimaks/klimaks-bold.woff') format('woff'),
             url('/fonts/klimaks/klimaks-bold.ttf') format('truetype'),
             url('/fonts/klimaks/klimaks-bold.svg#youworkforthem') format('svg');
-        font-weight: normal;
+        font-weight: bold;
         font-style: normal;
         font-display: swap;
     }
