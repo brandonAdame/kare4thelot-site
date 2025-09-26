@@ -8,24 +8,37 @@ import { NavArrowRight, NavArrowLeft } from "iconoir-react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import GreenvillePD from "../assets/images/Greenville-PD.png?url";
 import HealthFair2 from "../assets/images/Health-Fair2.png?url";
-import StudentActivity from "../assets/images/student-activity-2.jpg?url";
+
 import ColgateTruckActivity from "@/assets/images/edited-photos/colgate-truck-activity.jpg?url";
 import OutdoorActivity from "@/assets/images/edited-photos/outdoor-activity.jpg?url";
 import SmilingRetirementHome from "@/assets/images/edited-photos/smiling-retirement-home.jpg?url";
-import RetirementHomeSmiles from "@/assets/images/edited-photos/retirement-home-smiles.jpg?url";
 import RetirementHomeHugs from "@/assets/images/edited-photos/retirement-home-hugs.jpg?url";
 import RetirementHome2 from "@/assets/images/edited-photos/retirement-home-2.jpg?url";
+import Prayer from "@/assets/images/edited-photos/september-update/prayer.jpg?url";
+import ColgateSmiles from "@/assets/images/edited-photos/september-update/teeth.jpg?url";
+import OutsideKidsActivity from "@/assets/images/edited-photos/september-update/outside-kids-activity.jpg?url";
+import PrayerActvity from "@/assets/images/edited-photos/september-update/prayer-activity.jpg?url";
+import ClothesRack from "@/assets/images/edited-photos/september-update/clothes-rack.jpg?url";
+import ClothesTryon from "@/assets/images/edited-photos/september-update/clothes-tryon.jpg?url";
+import GroupPrayer from "@/assets/images/edited-photos/september-update/group-prayer.jpg?url";
+import BloodPressure from "@/assets/images/edited-photos/september-update/blood-pressure.jpg?url";
 
 const images = [
-  SmilingRetirementHome,
-  RetirementHomeSmiles,
-  RetirementHomeHugs,
-  RetirementHome2,
+  Prayer,
+  ColgateSmiles,
   ColgateTruckActivity,
   OutdoorActivity,
-  GreenvillePD,
+  OutsideKidsActivity,
+  PrayerActvity,
+  ClothesRack,
+  ClothesTryon,
+  GroupPrayer,
+  BloodPressure,
   HealthFair2,
-  StudentActivity,
+  SmilingRetirementHome,
+  RetirementHomeHugs,
+  RetirementHome2,
+  GreenvillePD,
 ];
 
 function CustomNavigation() {
