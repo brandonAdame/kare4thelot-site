@@ -1,31 +1,32 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import HealthFair from "../../../assets/images/Health-Fair.png?url";
-import Activity from "../../../assets/images/activity.jpg?url";
-import SnackTable from "../../../assets/images/snack-table.jpg?url";
-import RetirementHome from "../../../assets/images/retirement-home.jpg?url";
-import RetirementHome2 from "../../../assets/images/retirement-home-2.jpg?url";
 import "./styles.css";
+
+import HopeWellnessFair from "@/assets/images/edited-photos/september-update/hope-and-wellness-fair.jpg?url";
+import BloodPressure from "@/assets/images/edited-photos/september-update/blood-pressure.jpg?url";
+import RetirementHomeCrafts from "@/assets/images/edited-photos/september-update/retirement-home-crafts.jpg?url";
+import Boutique from "@/assets/images/edited-photos/september-update/boutique.jpg?url";
+import ColgateSmiles from "@/assets/images/edited-photos/september-update/teeth.jpg?url";
 
 const cards = [
   {
-    src: HealthFair,
+    src: HopeWellnessFair,
     angle: "8deg",
   },
   {
-    src: RetirementHome,
+    src: BloodPressure,
     angle: "-15deg",
   },
   {
-    src: RetirementHome2,
+    src: RetirementHomeCrafts,
     angle: "-5deg",
   },
   {
-    src: SnackTable,
+    src: ColgateSmiles,
     angle: "10deg",
   },
   {
-    src: Activity,
+    src: Boutique,
     angle: "-5deg",
   },
 ];
