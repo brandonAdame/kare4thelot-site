@@ -1,0 +1,435 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@plugin '../hero.ts';
+
+@source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Custom font families */
+  --font-hopeless-romantic-society: "hopeless-romantic-society", sans-serif;
+  --font-klimaks-bold-italic: "klimaks-bold-italic", sans-serif;
+  --font-klimaks-bold: "klimaks-bold", sans-serif;
+  --font-monteilga-regular: "monteilga-regular", sans-serif;
+  --font-monteilga-italic: "monteilga-italic", sans-serif;
+  --font-league-spartan-variable: "League Spartan Variable", sans-serif;
+  --font-quicksand-variable: "Quicksand Variable", sans-serif;
+  --font-montserrat-variable: "Montserrat Variable", sans-serif;
+
+  /* Background images */
+  --background-image-our-story: url("/src/assets/images/edited-photos/our-story-background.webp");
+
+  /* Custom colors */
+  --color-primary-site-color: #f4f1bb;
+  --color-off-white: #fbfbeb;
+  --color-highlight-blue: hsla(182, 75%, 36%, 1);
+  --color-highlight-red: #ff8a7a;
+  --color-half-baked: #98c8ca;
+  --color-footer-green: hsla(125, 25%, 90%, 1);
+  --color-gifting-pink: hsla(7, 100%, 74%, 0.48);
+  --color-gifting-pink-dark: hsla(7, 100%, 74%, 1);
+  --color-bible-verse-signature: hsla(26, 90%, 66%, 1);
+
+  /* Ivory color scale */
+  --color-ivory-50: #fbfbeb;
+  --color-ivory-100: #f6f6cb;
+  --color-ivory-200: #eeec9a;
+  --color-ivory-300: #e4db60;
+  --color-ivory-400: #dbc834;
+  --color-ivory-500: #cbb227;
+  --color-ivory-600: #af8d1f;
+  --color-ivory-700: #8c681c;
+  --color-ivory-800: #75541e;
+  --color-ivory-900: #64461f;
+  --color-ivory-950: #3a250e;
+
+  /* Earth orange & Terracotta scale */
+  --color-earth-orange: #ed6a5a;
+  --color-terracotta-50: #fef3f2;
+  --color-terracotta-100: #fde6e3;
+  --color-terracotta-200: #fdd0cb;
+  --color-terracotta-300: #fab0a7;
+  --color-terracotta-400: #f58274;
+  --color-terracotta-500: #ed6a5a;
+  --color-terracotta-600: #d83d2a;
+  --color-terracotta-700: #b53020;
+  --color-terracotta-800: #962b1e;
+  --color-terracotta-900: #7d291f;
+  --color-terracotta-950: #44110b;
+
+  /* Light blue & Breaker bay scale */
+  --color-light-blue: #9bc1bc;
+  --color-breaker-bay-50: #f2f9f9;
+  --color-breaker-bay-100: #deefef;
+  --color-breaker-bay-200: #c1dfe0;
+  --color-breaker-bay-300: #96c8ca;
+  --color-breaker-bay-400: #5ca4a9;
+  --color-breaker-bay-500: #488c92;
+  --color-breaker-bay-600: #3e747c;
+  --color-breaker-bay-700: #385f66;
+  --color-breaker-bay-800: #345056;
+  --color-breaker-bay-900: #2f454a;
+  --color-breaker-bay-950: #1b2c31;
+
+  /* Site gray & Green white scale */
+  --color-site-gray: #e6ebe0;
+  --color-green-white-50: #f7f8f5;
+  --color-green-white-100: #e6ebe0;
+  --color-green-white-200: #d9e1d1;
+  --color-green-white-300: #bbc8ad;
+  --color-green-white-400: #95a781;
+  --color-green-white-500: #74885f;
+  --color-green-white-600: #5d6f4a;
+  --color-green-white-700: #4b583d;
+  --color-green-white-800: #3e4833;
+  --color-green-white-900: #333c2b;
+  --color-green-white-950: #191f14;
+
+  /* Animations */
+  --animate-scroll-left: scroll-left linear infinite;
+  --animate-scroll-right: scroll-right linear infinite;
+  --animate-flip-words: flip-words 8s infinite;
+
+  /* Keyframes */
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes scroll-right {
+    0% {
+      transform: translateX(-50%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes flip-words {
+    10% {
+      transform: translateY(-112%);
+    }
+
+    25% {
+      transform: translateY(-100%);
+    }
+
+    35% {
+      transform: translateY(-212%);
+    }
+
+    50% {
+      transform: translateY(-200%);
+    }
+
+    60% {
+      transform: translateY(-312%);
+    }
+
+    75% {
+      transform: translateY(-300%);
+    }
+
+    85% {
+      transform: translateY(-412%);
+    }
+
+    100% {
+      transform: translateY(-400%);
+    }
+  }
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+/*
+Font: 		HopelessRomanticSociety
+Style: 		Regular
+URL: 		https://youworkforthem.com/font/T24735/hopeless-romantic-society
+Foundry: 	Peachcreme
+Foundry: 	https://youworkforthem.com/designer/1975/peachcreme
+Copyright:	
+Version: 	17
+Created:	July 04, 2024
+License: 	https://www.youworkforthem.com/font-license 
+License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
+			WebFont license rules. All other parties are strictly restricted 
+			from using the WebFonts(s) listed without a purchased license. 
+			All details above must always remain unaltered and visible in your CSS.
+*/
+
+@font-face {
+  font-family: "hopeless-romantic-society";
+  src: url("/fonts/hopeless-romantic-society/hopeless-romantic-society.eot");
+  src:
+    url("/fonts/hopeless-romantic-society/hopeless-romantic-society.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/hopeless-romantic-society/hopeless-romantic-society.woff2") format("woff2"),
+    url("/fonts/hopeless-romantic-society/hopeless-romantic-society.woff") format("woff"),
+    url("/fonts/hopeless-romantic-society/hopeless-romantic-society.ttf") format("truetype"),
+    url("/fonts/hopeless-romantic-society/hopeless-romantic-society.svg#youworkforthem") format("svg");
+  font-display: swap;
+}
+
+/*
+Font: 		Klimaks
+Style: 		Bold Italic
+URL: 		https://youworkforthem.com/font/T16089/klimaks
+Foundry: 	Kereatype
+Foundry: 	https://youworkforthem.com/designer/1636/kereatype
+Copyright:	Copyright (c) 2022 by Kereatype.  All right reserved.
+Version: 	17
+Created:	May 09, 2022
+License: 	https://www.youworkforthem.com/font-license 
+License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
+			WebFont license rules. All other parties are strictly restricted 
+			from using the WebFonts(s) listed without a purchased license. 
+			All details above must always remain unaltered and visible in your CSS.
+*/
+
+@font-face {
+  font-family: "klimaks-bold-italic";
+  src: url("/fonts/klimaks/klimaks-bold-italic.eot");
+  src:
+    url("/fonts/klimaks/klimaks-bold-italic.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/klimaks/klimaks-bold-italic.woff2") format("woff2"),
+    url("/fonts/klimaks/klimaks-bold-italic.woff") format("woff"),
+    url("/fonts/klimaks/klimaks-bold-italic.ttf") format("truetype"),
+    url("/fonts/klimaks/klimaks-bold-italic.svg#youworkforthem") format("svg");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+/*
+Font: 		Klimaks
+Style: 		Bold
+URL: 		https://youworkforthem.com/font/T16089/klimaks
+Foundry: 	Kereatype
+Foundry: 	https://youworkforthem.com/designer/1636/kereatype
+Copyright:	Copyright (c) 2022 by Kereatype.  All right reserved.
+Version: 	17
+Created:	May 09, 2022
+License: 	https://www.youworkforthem.com/font-license 
+License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
+			WebFont license rules. All other parties are strictly restricted 
+			from using the WebFonts(s) listed without a purchased license. 
+			All details above must always remain unaltered and visible in your CSS.
+*/
+
+@font-face {
+  font-family: "klimaks-bold";
+  src: url("/fonts/klimaks/klimaks-bold.eot");
+  src:
+    url("/fonts/klimaks/klimaks-bold.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/klimaks/klimaks-bold.woff2") format("woff2"),
+    url("/fonts/klimaks/klimaks-bold.woff") format("woff"),
+    url("/fonts/klimaks/klimaks-bold.ttf") format("truetype"),
+    url("/fonts/klimaks/klimaks-bold.svg#youworkforthem") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "monteilga-regular";
+  src: url("/fonts/monteilga/monteilga-regular.eot");
+  src:
+    url("/fonts/monteilga/monteilga-regular.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/monteilga/monteilga-regular.woff2") format("woff2"),
+    url("/fonts/monteilga/monteilga-regular.woff") format("woff"),
+    url("/fonts/monteilga/monteilga-regular.ttf") format("truetype"),
+    url("/fonts/monteilga/monteilga-regular.svg#youworkforthem") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*
+Font: 		
+Style: 		
+URL: 		https://youworkforthem.com/font/T25294/monteilga
+Foundry: 	Hishand Studio
+Foundry: 	https://youworkforthem.com/designer/1617/hishand-studio
+Copyright:	
+Version: 	17
+Created:	August 27, 2024
+License: 	https://www.youworkforthem.com/font-license 
+License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
+			WebFont license rules. All other parties are strictly restricted 
+			from using the WebFonts(s) listed without a purchased license. 
+			All details above must always remain unaltered and visible in your CSS.
+*/
+
+@font-face {
+  font-family: "monteilga-italic";
+  src: url("/fonts/monteilga/monteilga-italic.eot");
+  src:
+    url("/fonts/monteilga/monteilga-italic.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/monteilga/monteilga-italic.woff2") format("woff2"),
+    url("/fonts/monteilga/monteilga-italic.woff") format("woff"),
+    url("/fonts/monteilga/monteilga-italic.ttf") format("truetype"),
+    url("/fonts/monteilga/monteilga-italic.svg#youworkforthem") format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* league-spartan-latin-wght-normal */
+@font-face {
+  font-family: "League Spartan Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("@fontsource-variable/league-spartan/files/league-spartan-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+
+/* quicksand-latin-wght-normal */
+@font-face {
+  font-family: "Quicksand Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300 700;
+  src: url("@fontsource-variable/quicksand/files/quicksand-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+
+/* montserrat-latin-wght-normal */
+@font-face {
+  font-family: "Montserrat Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("@fontsource-variable/montserrat/files/montserrat-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
