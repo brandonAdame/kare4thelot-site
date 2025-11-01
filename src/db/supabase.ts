@@ -1,9 +1,7 @@
-import { createClient, type SupabaseClient } from "@supabase/supabase-js";
-import { type Database } from "./database.types";
+import { createClient } from "@supabase/supabase-js";
+import type { Database } from "../../database.types";
 
-export function createSupabaseClient(
-  supabaseUrl: string,
-  supabaseKey: string
-): SupabaseClient<Database> {
-  return createClient<Database>(supabaseUrl, supabaseKey);
-}
+export const supabase = createClient<Database>(
+  import.meta.env.SUPABASE_URL,
+  import.meta.env.SUPABASE_KEY,
+);
