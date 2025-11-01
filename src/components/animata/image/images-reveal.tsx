@@ -1,12 +1,12 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-// import "./styles.css";
+import "./styles.css";
 
-import HopeWellnessFair from "@/assets/images/edited-photos/september-update/hope-and-wellness-fair.webp";
-import BloodPressure from "@/assets/images/edited-photos/september-update/blood-pressure.webp";
-import RetirementHomeCrafts from "@/assets/images/edited-photos/september-update/retirement-home-crafts.webp";
-import Boutique from "@/assets/images/edited-photos/september-update/boutique.webp";
-import ColgateSmiles from "@/assets/images/edited-photos/september-update/teeth.webp";
+import HopeWellnessFair from "@/assets/images/edited-photos/september-update/hope-and-wellness-fair.jpg?url";
+import BloodPressure from "@/assets/images/edited-photos/september-update/blood-pressure.jpg?url";
+import RetirementHomeCrafts from "@/assets/images/edited-photos/september-update/retirement-home-crafts.jpg?url";
+import Boutique from "@/assets/images/edited-photos/september-update/boutique.jpg?url";
+import ColgateSmiles from "@/assets/images/edited-photos/september-update/teeth.jpg?url";
 
 const cards = [
   {
@@ -45,7 +45,7 @@ const cardVariants = {
     transition: {
       delay: custom.index * 0.1,
       duration: 0.3,
-      type: "spring" as const,
+      type: "spring",
       stiffness: 150,
       damping: 20,
       mass: 0.5,

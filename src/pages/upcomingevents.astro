@@ -1,0 +1,30 @@
+---
+import "../styles/global.css";
+import { supabase } from "../db/supabase";
+import UpcomingEvents from "../components/UpcomingEvents";
+import AlternativeLayout from "../layouts/AlternativeLayout.astro";
+
+const {
+  data: events,
+  count,
+  error,
+} = await supabase
+  .from("upcoming_events")
+  .select("*", { count: "exact" })
+  .order("event_date", { ascending: true })
+  .range(0, 3);
+
+if (error) {
+  console.error("error fetching events", error);
+}
+---
+
+<AlternativeLayout>
+  <UpcomingEvents client:load initialEvents={events ?? []} count={count ?? 0} />
+</AlternativeLayout>
+
+<style>
+  body {
+    font-family: "Montserrat Variable", sans-serif;
+  }
+</style>

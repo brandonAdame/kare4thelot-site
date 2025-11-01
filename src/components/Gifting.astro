@@ -1,0 +1,27 @@
+---
+import "@fontsource/cinzel-decorative";
+import DonateButton from "./DonateButton";
+import TextFlip from "./animata/text/text-flip";
+---
+
+<div
+  class="flex flex-col items-center justify-center bg-gifting-pink pt-12 px-10 tracking-wide gap-10 pb-10 text-center"
+>
+  <TextFlip client:visible />
+  <p class="text-lg lg:text-xl">
+    Your generosity helps us continue to serve the community.
+  </p>
+  <DonateButton client:visible />
+</div>
+
+<style>
+  h1 {
+    font-family: "Cinzel Decorative", serif;
+    font-size: clamp(2.25rem, 3vw, 3rem);
+    line-height: clamp(2.5rem, 5vw, 3.5rem);
+  }
+
+  p {
+    font-family: "klimaks-bold", sans-serif;
+  }
+</style>
