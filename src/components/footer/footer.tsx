@@ -2,10 +2,10 @@ import footerLogo from "@/assets/footerLogo.svg";
 import Instagram from "@/assets/instagramIcon.svg";
 import FacebookIcon from "@/assets/facebookIcon.svg";
 
-export default function Footer() {
-  const currentYear = new Date().getFullYear();
-  const paymentUrl = process.env.VITE_PAYMENT_URL as string;
+// Calculate year once at module scope to ensure consistency between server and client
+const currentYear = new Date().getFullYear();
 
+export default function Footer() {
   return (
     <footer className="bg-footer-green py-12 px-6 mt-10 relative font-league-spartan-variable">
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-footer-green p-4 rounded-full">
@@ -28,7 +28,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href={paymentUrl}
+                  href={import.meta.env.VITE_PAYMENT_URL}
                   target="_blank"
                   className="hover:underline font-thin"
                 >

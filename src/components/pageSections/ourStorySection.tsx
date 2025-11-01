@@ -33,9 +33,11 @@ export default function OurStorySection() {
               Mission
             </h2>
             <p className="max-w-lg text-center text-lg font-klimaks-bold">
-              To show underserved communities that there are still those who
-              care about their well-being and to assist in rediscovering one's
-              value in family and purpose.
+              Kare4TheLot assists underserved individuals and families in
+              rediscovering their value, strengthening family structure, and
+              fulfilling their purpose by delivering workshops, resources, and
+              immediate needs support directly into the community, driven by a
+              commitment to display God's Love.
             </p>
           </div>
           <div className="flex flex-col items-center gap-4">
@@ -43,10 +45,10 @@ export default function OurStorySection() {
               Vision
             </h2>
             <p className="max-w-lg text-center text-lg font-klimaks-bold">
-              Kare4TheLot is a genuine driving force that displays love,
-              encourages self-care, and supports everyone by providing hands-on
-              resources for life skills, as well as mental and physical
-              wellness.
+              To meet immediate needs, while providing guidance in spiritual
+              support, finances, employment, and housing, while serving as the
+              vital bridge that connects individuals to needed community
+              resources
             </p>
           </div>
         </div>

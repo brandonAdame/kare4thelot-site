@@ -38,12 +38,15 @@ function RouteComponent() {
               <li>Therapy</li>
               <li>Anti-bullying</li>
               <li>Love and support</li>
+              <li>Connect to needed community resources</li>
             </ul>
           </div>
         </div>
         <p className="text-lg lg:text-xl text-center w-3/4 font-klimaks-bold">
-          These services are provided for after school programs, nursing homes,
-          and for those that have found themselves displaced.
+          Our services are available to after school programs, nursing homes,
+          and those experiencing displacement. We strive to meet needs directly
+          or, when necessary, connect individuals with relevant community
+          organizations.
         </p>
 
         <div className="bg-breaker-bay-100 flex justify-center w-full py-10">
