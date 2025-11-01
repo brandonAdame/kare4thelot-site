@@ -8,14 +8,14 @@ import path from "node:path";
 
 const config = defineConfig({
   plugins: [
+    tanstackStart(),
     nitroV2Plugin(),
+    viteReact(),
     // this is the plugin that enables path aliases
     viteTsConfigPaths({
       projects: ["./tsconfig.json"],
     }),
     tailwindcss(),
-    tanstackStart(),
-    viteReact(),
   ],
   resolve: {
     alias: {

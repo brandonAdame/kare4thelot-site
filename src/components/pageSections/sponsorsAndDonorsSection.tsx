@@ -13,7 +13,7 @@ export default function SponsorsAndDonorsSection() {
             need. Your support is invaluable to us. We will continue to be
             responsible stewards of your donations and your trust. We know you
             have a lot of choices when it comes to donating, so we are honored
-            and forever grateful to each one of you for helping make Gods'
+            and forever grateful to each one of you for helping make God's
             vision for Kare4TheLot become a reality. We are praying for you and
             ask that you pray so we may continue to make a positive impact while
             serving OUR communities.

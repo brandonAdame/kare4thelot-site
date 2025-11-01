@@ -30,6 +30,7 @@ export default function Footer() {
                 <a
                   href={import.meta.env.VITE_PAYMENT_URL}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:underline font-thin"
                 >
                   Donate

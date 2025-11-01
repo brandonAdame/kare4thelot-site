@@ -55,7 +55,7 @@
   --font-montserrat-variable: "Montserrat Variable", sans-serif;
 
   /* Background images */
-  --background-image-our-story: url("/src/assets/images/edited-photos/our-story-background.webp");
+  --background-image-our-story: url("../assets/images/edited-photos/our-story-background.webp");
 
   /* Custom colors */
   --color-primary-site-color: #f4f1bb;
@@ -431,5 +431,9 @@ License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  .bg-our-story {
+    background-image: var(--background-image-our-story);
   }
 }

@@ -36,10 +36,7 @@ function CustomNavigation() {
         onClick={() => swiper.slidePrev()}
         className="rounded-full !absolute left-2 top-1/2 z-10 -translate-y-1/2"
       >
-        <NavArrowLeft
-          onClick={() => swiper.slidePrev()}
-          className="h-7 w-7 -translate-x-0.5 stroke-2"
-        />
+        <NavArrowLeft className="h-7 w-7 -translate-x-0.5 stroke-2" />
       </Button>
 
       <Button
@@ -48,10 +45,7 @@ function CustomNavigation() {
         onClick={() => swiper.slideNext()}
         className="rounded-full !absolute right-2 top-1/2 z-10 -translate-y-1/2"
       >
-        <NavArrowRight
-          onClick={() => swiper.slideNext()}
-          className="h-7 w-7 translate-x-px stroke-2"
-        />
+        <NavArrowRight className="h-7 w-7 translate-x-px stroke-2" />
       </Button>
     </>
   );
