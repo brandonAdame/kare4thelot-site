@@ -6,8 +6,6 @@ import GiftingSection from "@/components/pageSections/giftingSection";
 import SponsorsAndDonorsSection from "@/components/pageSections/sponsorsAndDonorsSection";
 import CommunityEventsSection from "@/components/pageSections/communityEventsSection";
 
-import "../styles/app.css";
-
 export const Route = createFileRoute("/")({
   component: App,
 });

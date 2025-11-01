@@ -4,6 +4,7 @@ import FacebookIcon from "@/assets/facebookIcon.svg";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const paymentUrl = process.env.VITE_PAYMENT_URL as string;
 
   return (
     <footer className="bg-footer-green py-12 px-6 mt-10 relative font-league-spartan-variable">
@@ -27,7 +28,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href={import.meta.env.PAYMENT_URL}
+                  href={paymentUrl}
                   target="_blank"
                   className="hover:underline font-thin"
                 >

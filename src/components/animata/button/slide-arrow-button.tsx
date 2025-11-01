@@ -16,7 +16,7 @@ export default function SlideArrowButton({
   return (
     <a href="/upcomingevents">
       <button
-        className={`group relative rounded-full border border-white bg-white p-2 text-xl font-semibold ${className}`}
+        className={`group relative rounded-full border border-white bg-white p-2 text-xl font-semibold cursor-pointer ${className}`}
         {...props}
       >
         <div
