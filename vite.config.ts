@@ -4,7 +4,6 @@ import viteReact from "@vitejs/plugin-react";
 import viteTsConfigPaths from "vite-tsconfig-paths";
 import tailwindcss from "@tailwindcss/vite";
 import { nitroV2Plugin } from "@tanstack/nitro-v2-vite-plugin";
-import path from "node:path";
 
 const config = defineConfig({
   plugins: [
@@ -17,11 +16,6 @@ const config = defineConfig({
     }),
     tailwindcss(),
   ],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
 });
 
 export default config;

@@ -19,7 +19,7 @@ export default function SponsorsAndDonorsSection() {
             serving OUR communities.
           </p>
           <div className="self-start leading-10">
-            <p className="font-hopeless-romantic-society text-medium lg:text-lg">
+            <p className="font-hopeless-romantic-society text-base lg:text-lg">
               With much love,
             </p>
             <p className="font-hopeless-romantic-society mt-4 ml-6 lg:ml-10 text-2xl lg:text-3xl">
