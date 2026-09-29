@@ -4,7 +4,7 @@ export default function HeroSection() {
     return (
       <>
       <div 
-        className="relative w-full h-[calc(100vh-4rem)] bg-cover bg-center bg-no-repeat flex items-center justify-center"
+        className="relative w-full h-[calc(100vh-var(--header-height))] bg-cover bg-center bg-no-repeat flex items-center justify-center"
         style={{
           backgroundImage: `url(${HeroImage})`,
         }}
