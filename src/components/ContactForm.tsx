@@ -36,7 +36,7 @@ const ContactForm = () => {
 
     try {
       const { status } = await axios.post(
-        import.meta.env.FORM_CARRY_URL,
+        import.meta.env.PUBLIC_FORM_CARRY_URL,
         encode(formData),
       );
 
@@ -44,7 +44,7 @@ const ContactForm = () => {
         onOpen();
       }
     } catch (error) {
-      console.error('Form submission failed:', error);
+      console.error("Form submission failed:", error);
       // Consider showing error modal or toast notification
     }
   };
