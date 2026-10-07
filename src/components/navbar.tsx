@@ -55,16 +55,19 @@ export default function Navbar() {
           <Button className="rounded-md hidden md:inline-flex">Donate</Button>
 
           <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger className="md:hidden">
-              <Button
-                variant={"outline"}
-                size="icon"
-                aria-label="Open menu"
-                className="rounded-md"
-              >
-                <MenuIcon className="h-6 w-6" />
-              </Button>
-            </SheetTrigger>
+            <SheetTrigger
+              className="md:hidden"
+              render={
+                <Button
+                  variant={"outline"}
+                  size="icon"
+                  aria-label="Open menu"
+                  className="rounded-md"
+                >
+                  <MenuIcon className="h-6 w-6" />
+                </Button>
+              }
+            ></SheetTrigger>
             <SheetContent
               side="right"
               className="w-3/4 max-h-screen overflow-y-auto"

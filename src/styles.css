@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/contrail-one@5.3.0/index.css');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource-variable/syne@5.3.0/index.css');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/anton@5.3.0/index.css');
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
@@ -126,7 +129,7 @@
 }
 
 @theme inline {
-  --font-sans: 'Inter Variable', sans-serif;
+  /* --font-sans: 'Syne', sans-serif; */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -163,7 +166,7 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  --font-heading: var(--font-sans);
+  /* --font-heading: var(--font-sans); */
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
@@ -175,10 +178,20 @@ body,
   min-height: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Anton', serif;
+}
+
 body {
   margin: 0;
+  font-family: 'Syne Variable', sans-serif;
   /* color: var(--sea-ink); */
-  font-family: var(--font-sans);
+  /* font-family: var(--font-sans); */
   /* background-color: var(--bg-base);
   background:
     radial-gradient(1100px 620px at -8% -10%, var(--hero-a), transparent 58%),
@@ -257,9 +270,9 @@ pre code {
   margin-inline: auto;
 }
 
-.display-title {
+/* .display-title {
   font-family: 'Fraunces', Georgia, serif;
-}
+} */
 
 .island-shell {
   border: 1px solid var(--line);
@@ -360,7 +373,7 @@ a {
     @apply bg-background text-foreground;
   }
 
-  html {
+  /* html {
     @apply font-sans;
-  }
+  } */
 }
